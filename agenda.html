@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Agenda · SPACE APPS · Santa Rosa de Calamuchita 2026</title>
+
+  <meta
+    name="description"
+    content="Agenda del NASA Space Apps Challenge 2026 en Santa Rosa de Calamuchita."
+  >
+
+  <!-- TIPOGRAFÍAS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS PRINCIPAL -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- CAMPO DE ESTRELLAS -->
+  <canvas id="starfield"></canvas>
+
+  <!-- PROGRESO DE SCROLL -->
+  <div class="progress-line" id="progressLine"></div>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="nav" id="nav">
+
+    <a href="index.html" class="nav__brand">
+      <span class="nav__dot"></span>
+      SPACE&nbsp;APPS
+      <span class="nav__brand-muted">· Santa&nbsp;Rosa</span>
+    </a>
+
+    <button
+      class="nav__toggle"
+      id="navToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav__links" id="navLinks">
+
+      <a href="index.html" class="nav__link">
+        Inicio
+      </a>
+
+      <a href="#agenda" class="nav__link is-active">
+        Agenda
+      </a>
+
+      <a href="que-es.html" class="nav__link">
+      ¿Que es Space App Challenge NASA?
+    </a>
+
+      <a href="organizacion.html" class="nav__link">
+        Organización
+      </a>
+
+      <a href="lugar.html" class="nav__link">
+      Lugar
+    </a>
+
+      <a href="index.html#asistir" class="nav__cta">
+        Confirmar asistencia
+      </a>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         CABECERA DE AGENDA
+    ========================== -->
+    <section class="hero" id="inicio">
+
+      <div class="hero__inner">
+
+        <p class="eyebrow" data-reveal>
+          13 · 14 · 15 de noviembre — 2026
+        </p>
+
+        <h1 class="hero__title" data-reveal>
+          La agenda de la
+          <span class="hero__title-accent">
+            misión.
+          </span>
+        </h1>
+
+        <p class="hero__sub" data-reveal>
+          Tres días para aprender, crear, colaborar y transformar
+          datos abiertos de la NASA en soluciones reales.
+        </p>
+
+        <div class="hero__actions" data-reveal>
+
+          <a href="#agenda" class="btn btn--primary">
+            Ver agenda ↓
+          </a>
+
+          <a href="index.html" class="btn btn--ghost">
+            Volver al inicio
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- HORIZONTE -->
+      <div class="hero__horizon" aria-hidden="true">
+
+        <svg
+          viewBox="0 0 1440 260"
+          preserveAspectRatio="none"
+          class="mountains"
+        >
+          <path
+            class="mountains__back"
+            d="M0,260 L0,140 L180,60 L340,150 L520,40 L700,160 L880,70 L1080,170 L1260,90 L1440,150 L1440,260 Z"
+          />
+
+          <path
+            class="mountains__front"
+            d="M0,260 L0,190 L120,140 L260,210 L440,120 L640,220 L820,150 L1000,230 L1200,160 L1440,220 L1440,260 Z"
+          />
+        </svg>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         AGENDA
+    ========================== -->
+    <section class="agenda" id="agenda">
+
+      <p class="section-eyebrow" data-reveal>
+        La trayectoria
+      </p>
+
+      <h2 class="section-title" data-reveal>
+        Tres días, una órbita completa.
+      </h2>
+
+
+      <!-- ÓRBITA -->
+      <div class="orbit" data-reveal>
+
+        <svg
+          viewBox="0 0 1000 140"
+          class="orbit__path"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path
+            id="orbitCurve"
+            d="M20,110 C 250,10 350,10 500,70 C 650,130 750,130 980,30"
+          />
+        </svg>
+
+        <div
+          class="orbit__sat"
+          id="orbitSat"
+        ></div>
+
+      </div>
+
+
+      <!-- =========================
+           DÍA 1
+      ========================== -->
+      <div class="agenda__grid">
+
+        <article class="day-card" data-reveal>
+
+          
+
+            <span class="day-card__label">
+            Día 1 · Despegue
+          </span>
+
+          <ul class="day-card__list">
+
+            <li>
+              <strong>Próximamente</strong>
+            </li>
+
+            <li>
+              La agenda del primer día
+              todavía no se encuentra
+              publicada.
+            </li>
+
+          </ul>
+
+
+        </article>
+
+
+        <!-- =========================
+             DÍA 2
+        ========================== -->
+        <article class="day-card" data-reveal>
+
+          <span class="day-card__label">
+            Día 2 · Vuelo
+          </span>
+
+          <ul class="day-card__list">
+
+            <li>
+              <strong>Fecha</strong>
+            </li>
+
+            <li>
+              <strong>08:00 — 09:15</strong><br>
+              Acreditación
+            </li>
+
+            <li>
+              <strong>09:30 — 10:15</strong><br>
+              Inicio de [Nombre del evento]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>10:15 — 11:00</strong><br>
+              [Nombre de la charla]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>11:00 — 11:30</strong><br>
+              Intervalo
+            </li>
+
+            <li>
+              <strong>11:30 — 12:00</strong><br>
+              [Nombre de la charla]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>12:00 — 12:30</strong><br>
+              [Título de la actividad]<br>
+              [Nombre del líder de la actividad]
+            </li>
+
+            <li>
+              <strong>12:30 — 13:00</strong><br>
+              [Título de la charla]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>13:00 — 14:00</strong><br>
+              Almuerzo
+            </li>
+
+            <li>
+              <strong>14:00 — 14:30</strong><br>
+              [Nombre de la charla]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>14:30 — 15:00</strong><br>
+              [Nombre de la charla]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>15:00 — 16:00</strong><br>
+              Intervalo
+            </li>
+
+            <li>
+              <strong>16:00 — 16:30</strong><br>
+              [Nombre de la charla]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>16:30 — 17:00</strong><br>
+              [Nombre de la charla]<br>
+              [Nombre del orador]
+            </li>
+
+            <li>
+              <strong>18:00 — 21:00</strong><br>
+              Fiesta en [Nombre del lugar]
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <!-- =========================
+             DÍA 3
+        ========================== -->
+        <article class="day-card" data-reveal>
+
+          <span class="day-card__label">
+            Día 3 · Aterrizaje
+          </span>
+
+          <ul class="day-card__list">
+
+            <li>
+              <strong>Próximamente</strong>
+            </li>
+
+            <li>
+              La agenda del tercer día
+              todavía no se encuentra
+              publicada.
+            </li>
+
+          </ul>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INFORMACIÓN
+    ========================== -->
+    <section class="mission">
+
+      <div class="mission__grid">
+
+        <p class="mission__line" data-reveal>
+          <span class="mission__num">01</span>
+          Los horarios y actividades pueden actualizarse a medida que
+          se acerque el evento.
+        </p>
+
+        <p class="mission__line" data-reveal>
+          <span class="mission__num">02</span>
+          Los nombres de charlas, actividades y oradores se encuentran
+          pendientes de confirmación.
+        </p>
+
+        <p class="mission__line" data-reveal>
+          <span class="mission__num">03</span>
+          Consultá nuevamente la agenda para conocer las novedades.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+    <section class="final-cta">
+
+      <p class="section-eyebrow" data-reveal>
+        Última llamada
+      </p>
+
+      <h2 class="section-title" data-reveal>
+        ¿Vas a ser parte de la misión?
+      </h2>
+
+      <p class="hero__sub" data-reveal>
+        Confirmá tu lugar y sumate a la tripulación.
+      </p>
+
+      <a
+        href="index.html#asistir"
+        class="btn btn--primary btn--lg"
+        data-reveal
+      >
+        Confirmar asistencia
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+ <footer class="footer">
+
+  <p>
+    NASA Space Apps Challenge ·
+    Santa Rosa de Calamuchita,
+    Córdoba, Argentina
+  </p>
+
+  <p class="footer__muted">
+    Sitio no oficial de la comunidad local del evento.
+  </p>
+
+  <p class="footer__credit">
+    Diseñado y desarrollado por
+    <a href="https://www.instagram.com/nikochittoo" target="_blank">@nikochittoo</a>
+  </p>
+
+</footer>
+
+
+  <!-- JS PRINCIPAL -->
+  <script src="script.js"></script>
+
+</body>
+</html>

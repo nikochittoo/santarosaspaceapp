@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>¿Qué es NASA Space Apps? · Santa Rosa de Calamuchita 2026</title>
+
+  <meta
+    name="description"
+    content="Conocé qué es NASA Space Apps Challenge, cómo funciona y quiénes pueden participar en Santa Rosa de Calamuchita 2026."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="starfield"></canvas>
+
+<div class="progress-line" id="progressLine"></div>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="nav" id="nav">
+
+  <a href="index.html#inicio" class="nav__brand">
+    <span class="nav__dot"></span>
+    SPACE&nbsp;APPS
+    <span class="nav__brand-muted">· Santa&nbsp;Rosa</span>
+  </a>
+
+
+  <button
+    class="nav__toggle"
+    id="navToggle"
+    aria-label="Abrir menú"
+    aria-expanded="false"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+
+  <nav class="nav__links" id="navLinks">
+
+    <a href="index.html#inicio" class="nav__link">
+      Inicio
+    </a>
+
+    <a href="agenda.html" class="nav__link">
+      Agenda
+    </a>
+
+    <a href="que-es.html" class="nav__link">
+      ¿Que es Space App Challenge NASA?
+    </a>
+
+    <a href="organizacion.html" class="nav__link">
+      Organización
+    </a>
+
+    <a href="lugar.html" class="nav__link">
+      Lugar
+    </a>
+
+    <a href="index.html#asistir" class="nav__cta">
+      Confirmar asistencia
+    </a>
+
+  </nav>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="inicio">
+
+  <div class="hero__inner">
+
+    <p class="eyebrow" data-reveal>
+      NASA SPACE APPS CHALLENGE · 2026
+    </p>
+
+    <h1 class="hero__title" data-reveal>
+      ¿Qué es
+      <span class="hero__title-accent">
+        Space Apps Challenge?
+      </span>
+    </h1>
+
+    <p class="hero__sub" data-reveal>
+      Una experiencia internacional donde personas de todo el mundo
+      se reúnen para crear soluciones utilizando datos abiertos de la NASA
+      y otras agencias espaciales.
+    </p>
+
+    <div class="hero__actions" data-reveal>
+
+      <a
+        href="#que-es"
+        class="btn btn--primary"
+      >
+        Conocer el desafío
+      </a>
+
+      <a
+        href="index.html"
+        class="btn btn--ghost"
+      >
+        Volver al inicio
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero__horizon" aria-hidden="true">
+
+    <svg
+      viewBox="0 0 1440 260"
+      preserveAspectRatio="none"
+      class="mountains"
+    >
+
+      <path
+        class="mountains__back"
+        d="M0,260 L0,140 L180,60 L340,150 L520,40 L700,160 L880,70 L1080,170 L1260,90 L1440,150 L1440,260 Z"
+      />
+
+      <path
+        class="mountains__front"
+        d="M0,260 L0,190 L120,140 L260,210 L440,120 L640,220 L820,150 L1000,230 L1200,160 L1440,220 L1440,260 Z"
+      />
+
+    </svg>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     INTRODUCCIÓN
+========================= -->
+
+<section class="mission" id="que-es">
+
+  <div class="mission__grid">
+
+    <p class="mission__line" data-reveal>
+      <span class="mission__num">01</span>
+      Un hackathon global impulsado por la NASA.
+    </p>
+
+    <p class="mission__line" data-reveal>
+      <span class="mission__num">02</span>
+      Datos reales para resolver problemas reales.
+    </p>
+
+    <p class="mission__line" data-reveal>
+      <span class="mission__num">03</span>
+      Personas de distintas disciplinas trabajando juntas.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     QUÉ ES
+========================= -->
+
+<section class="about">
+
+  <div class="about__grid">
+
+    <div>
+
+      <p class="section-eyebrow" data-reveal>
+        El desafío
+      </p>
+
+      <h2 class="section-title" data-reveal>
+        Una misión que empieza con una idea.
+      </h2>
+
+      <p class="about__text" data-reveal>
+        NASA Space Apps Challenge es un hackathon internacional
+        organizado por la NASA que invita a personas de todo el mundo
+        a trabajar juntas durante un fin de semana para desarrollar
+        soluciones innovadoras frente a desafíos relacionados con
+        la Tierra y el espacio.
+      </p>
+
+      <p class="about__text" data-reveal>
+        Los participantes utilizan datos abiertos, herramientas
+        tecnológicas y conocimientos de diferentes disciplinas para
+        transformar una idea en un proyecto concreto.
+      </p>
+
+      <p class="about__text" data-reveal>
+        No se trata solamente de programar. El desafío está pensado
+        para que puedan participar personas con diferentes habilidades:
+        programación, diseño, ciencia, comunicación, ingeniería,
+        educación, arte y muchas otras.
+      </p>
+
+    </div>
+
+
+    <div class="about__badges" data-reveal>
+
+      <span class="badge">
+        🚀 Tecnología
+      </span>
+
+      <span class="badge">
+        🌎 Ciencia
+      </span>
+
+      <span class="badge">
+        💻 Programación
+      </span>
+
+      <span class="badge">
+        🎨 Diseño
+      </span>
+
+      <span class="badge">
+        🧠 Innovación
+      </span>
+
+      <span class="badge">
+        🤝 Comunidad
+      </span>
+
+      <span class="badge badge--accent">
+        🛰️ Datos de NASA
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CÓMO FUNCIONA
+========================= -->
+
+<section class="agenda">
+
+  <p class="section-eyebrow" data-reveal>
+    La misión
+  </p>
+
+  <h2 class="section-title" data-reveal>
+    ¿Cómo funciona?
+  </h2>
+
+
+  <div class="agenda__grid">
+
+
+    <article class="day-card" data-reveal>
+
+      <div class="day-card__overlay"></div>
+
+      <div class="day-card__content">
+
+        <span class="day-card__label">
+          01 · Elegir
+        </span>
+
+        <ul class="day-card__list">
+
+          <li>
+            Conocer los desafíos
+          </li>
+
+          <li>
+            Elegir una problemática
+          </li>
+
+          <li>
+            Formar un equipo
+          </li>
+
+        </ul>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="day-card" data-reveal>
+
+      <div class="day-card__overlay"></div>
+
+      <div class="day-card__content">
+
+        <span class="day-card__label">
+          02 · Crear
+        </span>
+
+        <ul class="day-card__list">
+
+          <li>
+            Investigar
+          </li>
+
+          <li>
+            Diseñar una solución
+          </li>
+
+          <li>
+            Desarrollar el proyecto
+          </li>
+
+        </ul>
+
+      </div>
+
+    </article>
+
+
+
+    <article class="day-card" data-reveal>
+
+      <div class="day-card__overlay"></div>
+
+      <div class="day-card__content">
+
+        <span class="day-card__label">
+          03 · Presentar
+        </span>
+
+        <ul class="day-card__list">
+
+          <li>
+            Preparar el proyecto
+          </li>
+
+          <li>
+            Presentar la solución
+          </li>
+
+          <li>
+            Compartir la experiencia
+          </li>
+
+        </ul>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     NO ES SOLO PROGRAMAR
+========================= -->
+
+<section class="about">
+
+  <div class="about__grid">
+
+    <div>
+
+      <p class="section-eyebrow" data-reveal>
+        Más que código
+      </p>
+
+      <h2 class="section-title" data-reveal>
+        No necesitás ser programador para participar.
+      </h2>
+
+    </div>
+
+
+    <div>
+
+      <p class="about__text" data-reveal>
+        Uno de los aspectos más importantes de Space Apps es la
+        diversidad de conocimientos. Los equipos pueden combinar
+        diferentes capacidades para construir una solución más completa.
+      </p>
+
+      <p class="about__text" data-reveal>
+        Una persona puede encargarse de la programación, otra del
+        diseño, otra de investigar el problema y otra de comunicar
+        la idea. Lo importante es trabajar juntos.
+      </p>
+
+      <div class="about__badges" data-reveal>
+
+        <span class="badge">
+          Programadores
+        </span>
+
+        <span class="badge">
+          Diseñadores
+        </span>
+
+        <span class="badge">
+          Estudiantes
+        </span>
+
+        <span class="badge">
+          Docentes
+        </span>
+
+        <span class="badge">
+          Científicos
+        </span>
+
+        <span class="badge">
+          Emprendedores
+        </span>
+
+        <span class="badge">
+          Creativos
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     DATOS ABIERTOS
+========================= -->
+
+<section class="mission">
+
+  <div class="mission__grid">
+
+    <p class="mission__line" data-reveal>
+      <span class="mission__num">01</span>
+      La NASA publica enormes cantidades de información científica.
+    </p>
+
+    <p class="mission__line" data-reveal>
+      <span class="mission__num">02</span>
+      Los participantes pueden utilizar esos datos para desarrollar
+      sus soluciones.
+    </p>
+
+    <p class="mission__line" data-reveal>
+      <span class="mission__num">03</span>
+      El desafío consiste en transformar información en conocimiento
+      y conocimiento en una solución.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ARGENTINA
+========================= -->
+
+<section class="about">
+
+  <div class="about__grid">
+
+    <div>
+
+      <p class="section-eyebrow" data-reveal>
+        Argentina en la misión
+      </p>
+
+      <h2 class="section-title" data-reveal>
+        También somos parte de esta comunidad global.
+      </h2>
+
+    </div>
+
+
+    <div>
+
+      <p class="about__text" data-reveal>
+        Argentina participa de la comunidad internacional de Space Apps
+        a través de distintas sedes locales distribuidas en el país.
+      </p>
+
+      <p class="about__text" data-reveal>
+        En 2026, Santa Rosa de Calamuchita se suma a esta misión para
+        acercar la experiencia a nuestra comunidad y generar un espacio
+        donde estudiantes, profesionales, docentes, emprendedores y
+        personas curiosas puedan crear juntos.
+      </p>
+
+      <p class="about__text" data-reveal>
+        Durante tres días, la ciudad se convierte en un punto de encuentro
+        entre tecnología, ciencia, creatividad y comunidad.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     SANTA ROSA
+========================= -->
+
+<section class="final-cta">
+
+  <p class="section-eyebrow" data-reveal>
+    Santa Rosa de Calamuchita · 2026
+  </p>
+
+  <h2 class="section-title" data-reveal>
+    Tu misión empieza acá.
+  </h2>
+
+  <p class="hero__sub" data-reveal>
+    13, 14 y 15 de noviembre.
+    Tres días para crear, aprender y llevar una idea un poco más lejos.
+  </p>
+
+  <a
+    href="index.html#asistir"
+    class="btn btn--primary btn--lg"
+    data-reveal
+  >
+    Confirmar asistencia
+  </a>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+  <p>
+    NASA Space Apps Challenge ·
+    Santa Rosa de Calamuchita,
+    Córdoba, Argentina
+  </p>
+
+  <p class="footer__muted">
+    Sitio no oficial de la comunidad local del evento.
+  </p>
+
+  <p class="footer__credit">
+    Diseñado y desarrollado por
+    <a
+      href="https://www.instagram.com/nikochittoo"
+      target="_blank"
+      rel="noopener"
+    >
+      @nikochittoo
+    </a>
+  </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
