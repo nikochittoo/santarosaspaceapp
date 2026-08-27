@@ -353,8 +353,7 @@ img {
   display: flex;
   align-items: center;
   border-bottom: 1px solid var(--line);
-  padding: 6vw 6vw 0;
-  /* modificado */
+  padding: 6vw 6vw;
   overflow: hidden;
 }
 
@@ -406,8 +405,7 @@ img {
 .countdown {
   display: flex;
   gap: 22px;
-  margin-bottom: 56px;
-  /* modificado */
+  margin-bottom: 36px;
 }
 
 .countdown__item {
@@ -790,7 +788,7 @@ img {
   margin: 0 auto 16px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--teal), var(--gold));
-  opacity: 0.35;
+  opacity: 1;
 }
 
 .speaker-card h3 {
@@ -1531,41 +1529,32 @@ img {
   text-decoration: underline;
 }
 
-/* Contenedor del enlace (Logo + Texto) */
 .nav__brand {
   display: flex;
-  align-items: center; /* Centra verticalmente el logo y el texto */
-  gap: 15px; /* Controla el espacio de separación entre el logo y el texto */
-  text-decoration: none; 
+  align-items: center;
+  gap: 15px;
+  text-decoration: none;
 }
 
-/* La imagen del logo */
 .logo {
-  height: 60px; /* <--- ACÁ ESTÁ LA MAGIA. Podés achicar o agrandar este valor a gusto */
-  width: auto;  /* Esto asegura que no se deforme ni se aplaste */
+  height: 60px;
+  width: auto;
   display: block;
 }
 
-
 .speaker-card__avatar {
-  /* 1. Le damos tamaño al div vacío */
-  width: 120px; 
+  width: 120px;
   height: 120px;
-  
-  /* 2. Ponemos tu imagen de fondo exacta */
   background-image: url('image_92328e.jpg');
   background-size: cover;
   background-position: center;
-  
-  /* 3. Forma redonda (opcional, si el avatar es un círculo) */
   border-radius: 70%;
-  
-  /* 4. Acá está la opacidad que mencionás */
-  opacity: 1.0; 
+  opacity: 1.0;
 }
 
 .speaker-card__img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Evita que la foto se estire o aplaste */
+  object-fit: cover;
+  border-radius: 70%;
 }
