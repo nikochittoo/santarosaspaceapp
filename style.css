@@ -539,7 +539,7 @@ img{ max-width:100%; display:block; }
   margin: 0 auto 16px;
   border-radius:50%;
   background: linear-gradient(135deg, var(--teal), var(--gold));
-  opacity: 0.35;
+  opacity: 1;
 }
 .speaker-card h3{ font-family: var(--font-display); margin: 0 0 6px; font-size: 1rem; }
 .speaker-card p{ color: var(--muted); font-size: 0.85rem; margin:0; }
