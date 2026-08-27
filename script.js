@@ -14,23 +14,6 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// ============ NAV: LINK ACTIVO SEGÚN SCROLL ============
-const sections = document.querySelectorAll('main section[id]');
-const navAnchors = document.querySelectorAll('.nav__link');
-
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const id = entry.target.getAttribute('id');
-      navAnchors.forEach(a => {
-        a.classList.toggle('is-active', a.getAttribute('href') === `#${id}`);
-      });
-    }
-  });
-}, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
-
-sections.forEach(section => navObserver.observe(section));
-
 // ============ BARRA DE PROGRESO DE SCROLL ============
 const progressLine = document.getElementById('progressLine');
 function updateProgress() {
@@ -295,3 +278,17 @@ if (pastTrack && pastPrev && pastNext) {
   });
 
 }
+
+// ============ NAV: PÁGINA ACTIVA ============
+const currentPage =
+  window.location.pathname.split('/').pop() || 'index.html';
+
+document.querySelectorAll('.nav__link').forEach(link => {
+  const linkPage = link.getAttribute('href');
+
+  if (linkPage === currentPage) {
+    link.classList.add('is-active');
+  } else {
+    link.classList.remove('is-active');
+  }
+});

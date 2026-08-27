@@ -7,44 +7,35 @@
 
   <title>El lugar · SPACE APPS · Santa Rosa de Calamuchita 2026</title>
 
-  <meta
-    name="description"
-    content="Conocé la sede del NASA Space Apps Challenge 2026 en Santa Rosa de Calamuchita: Cooperativa de Provisión de Energía Eléctrica, Libertad 579."
-  >
+  <meta name="description"
+    content="Conocé la sede del NASA Space Apps Challenge 2026 en Santa Rosa de Calamuchita: Cooperativa de Provisión de Energía Eléctrica, Libertad 579.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
-    rel="stylesheet"
-  >
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<canvas id="starfield"></canvas>
+  <canvas id="starfield"></canvas>
 
-<div class="progress-line" id="progressLine"></div>
+  <div class="progress-line" id="progressLine"></div>
 
 
-<!-- =========================
+  <!-- =========================
      NAVBAR
 ========================= -->
 
-  <header
-    class="nav"
-    id="nav"
-  >
+  <header class="nav" id="nav">
 
-    <a
-      href="index.html"
-      class="nav__brand"
-    >
+    <a href="index.html" class="nav__brand">
 
-      
+
       <img src="img/logo.png" alt="Logo" class="logo">
 
       <span class="nav__brand-muted">
@@ -54,12 +45,7 @@
     </a>
 
 
-    <button
-      class="nav__toggle"
-      id="navToggle"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-    >
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
 
       <span></span>
       <span></span>
@@ -68,49 +54,35 @@
     </button>
 
 
-    <nav
-      class="nav__links"
-      id="navLinks"
-    >
+    <nav class="nav__links" id="navLinks">
 
-      <a
-        href="index.html#inicio"
-        class="nav__link"
-      >
+      <a href="index.html" class="nav__link">
         Inicio
       </a>
 
 
-      <a
-        href="agenda.html"
-        class="nav__link"
-      >
+      <a href="agenda.html" class="nav__link">
         Agenda
       </a>
 
 
       <a href="que-es.html" class="nav__link">
-      ¿Que es Space App Challenge NASA?
-    </a>
+        ¿Que es Space App Challenge NASA?
+      </a>
 
 
-      <a
-        href="organizacion.html"
-        class="nav__link is-active"
-      >
+      <a href="organizacion.html" class="nav__link">
         Organización
       </a>
 
 
       <a href="lugar.html" class="nav__link">
-      Lugar
-    </a>
+        Lugar
+      </a>
 
 
-       <a
-        href=" https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
-        class="nav__cta"
-      >
+      <a href=" https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
+        class="nav__cta">
         Confirmar asistencia
       </a>
 
@@ -124,468 +96,442 @@
 
 
 
-<!-- =========================
+    <!-- =========================
      HERO
 ========================= -->
 
-<section class="hero" id="inicio">
+    <section class="hero" id="inicio">
 
-  <div class="hero__inner">
+      <div class="hero__inner">
 
-    <p class="eyebrow" data-reveal>
-      SANTA ROSA DE CALAMUCHITA · CÓRDOBA
-    </p>
+        <p class="eyebrow" data-reveal>
+          SANTA ROSA DE CALAMUCHITA · CÓRDOBA
+        </p>
 
-    <h1 class="hero__title" data-reveal>
-      El lugar donde
-      <span class="hero__title-accent">
-        comienza la misión.
-      </span>
-    </h1>
+        <h1 class="hero__title" data-reveal>
+          El lugar donde
+          <span class="hero__title-accent">
+            comienza la misión.
+          </span>
+        </h1>
 
-    <p class="hero__sub" data-reveal>
-      Durante el NASA Space Apps Challenge 2026,
-      la Cooperativa de Santa Rosa de Calamuchita
-      se convierte en nuestro punto de encuentro.
-    </p>
+        <p class="hero__sub" data-reveal>
+          Durante el NASA Space Apps Challenge 2026,
+          la Cooperativa de Santa Rosa de Calamuchita
+          se convierte en nuestro punto de encuentro.
+        </p>
 
-    <div class="hero__actions" data-reveal>
+        <div class="hero__actions" data-reveal>
 
-      <a
-        href="#sede"
-        class="btn btn--primary"
-      >
-        Conocer la sede
-      </a>
+          <a href="#sede" class="btn btn--primary">
+            Conocer la sede
+          </a>
 
-      <a
-        href="#mapa"
-        class="btn btn--ghost"
-      >
-        Ver ubicación ↓
-      </a>
+          <a href="#mapa" class="btn btn--ghost">
+            Ver ubicación ↓
+          </a>
 
-    </div>
+        </div>
 
-  </div>
+      </div>
 
 
-  <div class="hero__horizon" aria-hidden="true">
+      <div class="hero__horizon" aria-hidden="true">
 
-    <svg
-      viewBox="0 0 1440 260"
-      preserveAspectRatio="none"
-      class="mountains"
-    >
+        <svg viewBox="0 0 1440 260" preserveAspectRatio="none" class="mountains">
 
-      <path
-        class="mountains__back"
-        d="M0,260 L0,140 L180,60 L340,150 L520,40 L700,160 L880,70 L1080,170 L1260,90 L1440,150 L1440,260 Z"
-      />
+          <path class="mountains__back"
+            d="M0,260 L0,140 L180,60 L340,150 L520,40 L700,160 L880,70 L1080,170 L1260,90 L1440,150 L1440,260 Z" />
 
-      <path
-        class="mountains__front"
-        d="M0,260 L0,190 L120,140 L260,210 L440,120 L640,220 L820,150 L1000,230 L1200,160 L1440,220 L1440,260 Z"
-      />
+          <path class="mountains__front"
+            d="M0,260 L0,190 L120,140 L260,210 L440,120 L640,220 L820,150 L1000,230 L1200,160 L1440,220 L1440,260 Z" />
 
-    </svg>
+        </svg>
 
-  </div>
+      </div>
 
-</section>
+    </section>
 
 
 
-<!-- =========================
+    <!-- =========================
      UBICACIÓN RÁPIDA
 ========================= -->
 
-<section class="mission">
+    <section class="mission">
 
-  <div class="mission__grid">
+      <div class="mission__grid">
 
-    <p class="mission__line" data-reveal>
-      <span class="mission__num">01</span>
-      Libertad 579 · Santa Rosa de Calamuchita
-    </p>
+        <p class="mission__line" data-reveal>
+          <span class="mission__num">01</span>
+          Libertad 579 · Santa Rosa de Calamuchita
+        </p>
 
-    <p class="mission__line" data-reveal>
-      <span class="mission__num">02</span>
-      Provincia de Córdoba · Argentina
-    </p>
+        <p class="mission__line" data-reveal>
+          <span class="mission__num">02</span>
+          Provincia de Córdoba · Argentina
+        </p>
 
-    <p class="mission__line" data-reveal>
-      <span class="mission__num">03</span>
-      13 · 14 · 15 de noviembre de 2026
-    </p>
+        <p class="mission__line" data-reveal>
+          <span class="mission__num">03</span>
+          13 · 14 · 15 de noviembre de 2026
+        </p>
 
-  </div>
+      </div>
 
-</section>
+    </section>
 
 
 
-<!-- =========================
+    <!-- =========================
      LA SEDE
 ========================= -->
 
-<section class="place" id="sede">
+    <section class="place" id="sede">
 
-  <div class="place__grid">
+      <div class="place__grid">
 
-    <div data-reveal>
+        <div data-reveal>
 
-      <p class="section-eyebrow">
-        Nuestra sede
-      </p>
+          <p class="section-eyebrow">
+            Nuestra sede
+          </p>
 
-      <h2 class="section-title">
-        Cooperativa de Provisión de Energía Eléctrica
-      </h2>
+          <h2 class="section-title">
+            Cooperativa de Provisión de Energía Eléctrica
+          </h2>
 
-      <p class="place__address">
-        Libertad 579,
-        Santa Rosa de Calamuchita,
-        Córdoba, Argentina.
-      </p>
+          <p class="place__address">
+            Libertad 579,
+            Santa Rosa de Calamuchita,
+            Córdoba, Argentina.
+          </p>
 
-      <p class="place__text">
-        La sede del NASA Space Apps Challenge Santa Rosa de
-        Calamuchita será la Cooperativa de Provisión de Energía
-        Eléctrica y otros Servicios Públicos de la ciudad.
-      </p>
+          <p class="place__text">
+            La sede del NASA Space Apps Challenge Santa Rosa de
+            Calamuchita será la Cooperativa de Provisión de Energía
+            Eléctrica y otros Servicios Públicos de la ciudad.
+          </p>
 
-      <p class="place__text">
-        Es un espacio que forma parte de la vida cotidiana de
-        nuestra comunidad y que durante tres días será el punto
-        de encuentro de estudiantes, profesionales, docentes,
-        desarrolladores, diseñadores y personas con ganas de crear.
-      </p>
+          <p class="place__text">
+            Es un espacio que forma parte de la vida cotidiana de
+            nuestra comunidad y que durante tres días será el punto
+            de encuentro de estudiantes, profesionales, docentes,
+            desarrolladores, diseñadores y personas con ganas de crear.
+          </p>
 
-    </div>
+        </div>
 
 
-    <div class="place__map" id="mapa" data-reveal>
+        <div class="place__map" id="mapa" data-reveal>
 
-      <iframe
-        title="Ubicación del NASA Space Apps Challenge Santa Rosa de Calamuchita"
-        src="https://maps-api-ssl.google.com/maps?hl=es&ll=-32.065499,-64.539029&output=embed&q=-32.065361,-64.539318&z=19"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
+          <iframe title="Ubicación del NASA Space Apps Challenge Santa Rosa de Calamuchita"
+            src="https://maps-api-ssl.google.com/maps?hl=es&ll=-32.065499,-64.539029&output=embed&q=-32.065361,-64.539318&z=19"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
 
-    </div>
+        </div>
 
-  </div>
+      </div>
 
-</section>
+    </section>
 
 
 
-<!-- =========================
+    <!-- =========================
      SOBRE LA COOPERATIVA
 ========================= -->
 
-<section class="about">
+    <section class="about">
 
-  <div class="about__grid">
+      <div class="about__grid">
 
-    <div>
+        <div>
 
-      <p class="section-eyebrow" data-reveal>
-        El espacio
-      </p>
+          <p class="section-eyebrow" data-reveal>
+            El espacio
+          </p>
 
-      <h2 class="section-title" data-reveal>
-        Un lugar de la comunidad para una misión global.
-      </h2>
+          <h2 class="section-title" data-reveal>
+            Un lugar de la comunidad para una misión global.
+          </h2>
 
-    </div>
+        </div>
 
 
-    <div>
+        <div>
 
-      <p class="about__text" data-reveal>
-        La Cooperativa de Santa Rosa de Calamuchita trabaja
-        en la prestación de servicios para la comunidad local
-        y tiene su sede en calle Libertad 579.
-      </p>
+          <p class="about__text" data-reveal>
+            La Cooperativa de Santa Rosa de Calamuchita trabaja
+            en la prestación de servicios para la comunidad local
+            y tiene su sede en calle Libertad 579.
+          </p>
 
-      <p class="about__text" data-reveal>
-        Para Space Apps, este espacio adquiere un nuevo propósito:
-        reunir a personas con diferentes conocimientos para trabajar
-        durante un mismo fin de semana sobre desafíos vinculados
-        con la Tierra y el espacio.
-      </p>
+          <p class="about__text" data-reveal>
+            Para Space Apps, este espacio adquiere un nuevo propósito:
+            reunir a personas con diferentes conocimientos para trabajar
+            durante un mismo fin de semana sobre desafíos vinculados
+            con la Tierra y el espacio.
+          </p>
 
-      <div class="about__badges" data-reveal>
+          <div class="about__badges" data-reveal>
 
-        <span class="badge">
-          ⚡ Comunidad
-        </span>
+            <span class="badge">
+              ⚡ Comunidad
+            </span>
 
-        <span class="badge">
-          🧠 Innovación
-        </span>
+            <span class="badge">
+              🧠 Innovación
+            </span>
 
-        <span class="badge">
-          💻 Tecnología
-        </span>
+            <span class="badge">
+              💻 Tecnología
+            </span>
 
-        <span class="badge">
-          🤝 Trabajo en equipo
-        </span>
+            <span class="badge">
+              🤝 Trabajo en equipo
+            </span>
 
-        <span class="badge badge--accent">
-          🚀 Space Apps 2026
-        </span>
+            <span class="badge badge--accent">
+              🚀 Space Apps 2026
+            </span>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
-
-  </div>
-
-</section>
+    </section>
 
 
 
-<!-- =========================
+    <!-- =========================
      QUÉ VAS A ENCONTRAR
 ========================= -->
 
-<section class="agenda">
-
-  <p class="section-eyebrow" data-reveal>
-    Durante el evento
-  </p>
-
-  <h2 class="section-title" data-reveal>
-    ¿Qué vas a encontrar acá?
-  </h2>
-
-
-  <div class="agenda__grid">
-
-
-    <article class="day-card" data-reveal>
-
-      <div class="day-card__overlay"></div>
-
-      <div class="day-card__content">
-
-        <span class="day-card__label">
-          01 · Comunidad
-        </span>
-
-        <ul class="day-card__list">
-
-          <li>
-            Participantes de distintas disciplinas
-          </li>
-
-          <li>
-            Equipos de trabajo
-          </li>
-
-          <li>
-            Intercambio de ideas
-          </li>
-
-        </ul>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="day-card" data-reveal>
-
-      <div class="day-card__overlay"></div>
-
-      <div class="day-card__content">
-
-        <span class="day-card__label">
-          02 · Trabajo
-        </span>
-
-        <ul class="day-card__list">
-
-          <li>
-            Espacios para desarrollar proyectos
-          </li>
-
-          <li>
-            Mentores y acompañamiento
-          </li>
-
-          <li>
-            Trabajo colaborativo
-          </li>
-
-        </ul>
-
-      </div>
-
-    </article>
-
-
-
-    <article class="day-card" data-reveal>
-
-      <div class="day-card__overlay"></div>
-
-      <div class="day-card__content">
-
-        <span class="day-card__label">
-          03 · Misión
-        </span>
-
-        <ul class="day-card__list">
-
-          <li>
-            Desafíos de NASA Space Apps
-          </li>
-
-          <li>
-            Presentación de soluciones
-          </li>
-
-          <li>
-            Una experiencia para recordar
-          </li>
-
-        </ul>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     CÓMO LLEGAR
-========================= -->
-
-<section class="about">
-
-  <div class="about__grid">
-
-    <div>
+    <section class="agenda">
 
       <p class="section-eyebrow" data-reveal>
-        Encontrarnos
+        Durante el evento
       </p>
 
       <h2 class="section-title" data-reveal>
-        Nos vemos en Libertad 579.
+        ¿Qué vas a encontrar acá?
       </h2>
 
-    </div>
+
+      <div class="agenda__grid">
 
 
-    <div>
+        <article class="day-card" data-reveal>
 
-      <p class="about__text" data-reveal>
-        La sede se encuentra en una zona céntrica de
-        Santa Rosa de Calamuchita, por lo que podrás
-        llegar desde distintos puntos de la ciudad.
-      </p>
+          <div class="day-card__overlay"></div>
 
-      <p class="about__text" data-reveal>
-        Antes del evento publicaremos información
-        complementaria sobre accesos, estacionamiento,
-        horarios y todo lo que necesites saber para
-        llegar preparado.
-      </p>
+          <div class="day-card__content">
 
-      <a
-        href="#mapa"
-        class="btn btn--ghost"
-        data-reveal
-      >
-        Ver mapa ↑
-      </a>
+            <span class="day-card__label">
+              01 · Comunidad
+            </span>
 
-    </div>
+            <ul class="day-card__list">
 
-  </div>
+              <li>
+                Participantes de distintas disciplinas
+              </li>
 
-</section>
+              <li>
+                Equipos de trabajo
+              </li>
+
+              <li>
+                Intercambio de ideas
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
 
 
 
-<!-- =========================
+        <article class="day-card" data-reveal>
+
+          <div class="day-card__overlay"></div>
+
+          <div class="day-card__content">
+
+            <span class="day-card__label">
+              02 · Trabajo
+            </span>
+
+            <ul class="day-card__list">
+
+              <li>
+                Espacios para desarrollar proyectos
+              </li>
+
+              <li>
+                Mentores y acompañamiento
+              </li>
+
+              <li>
+                Trabajo colaborativo
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="day-card" data-reveal>
+
+          <div class="day-card__overlay"></div>
+
+          <div class="day-card__content">
+
+            <span class="day-card__label">
+              03 · Misión
+            </span>
+
+            <ul class="day-card__list">
+
+              <li>
+                Desafíos de NASA Space Apps
+              </li>
+
+              <li>
+                Presentación de soluciones
+              </li>
+
+              <li>
+                Una experiencia para recordar
+              </li>
+
+            </ul>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+     CÓMO LLEGAR
+========================= -->
+
+    <section class="about">
+
+      <div class="about__grid">
+
+        <div>
+
+          <p class="section-eyebrow" data-reveal>
+            Encontrarnos
+          </p>
+
+          <h2 class="section-title" data-reveal>
+            Nos vemos en Libertad 579.
+          </h2>
+
+        </div>
+
+
+        <div>
+
+          <p class="about__text" data-reveal>
+            La sede se encuentra en una zona céntrica de
+            Santa Rosa de Calamuchita, por lo que podrás
+            llegar desde distintos puntos de la ciudad.
+          </p>
+
+          <p class="about__text" data-reveal>
+            Antes del evento publicaremos información
+            complementaria sobre accesos, estacionamiento,
+            horarios y todo lo que necesites saber para
+            llegar preparado.
+          </p>
+
+          <a href="#mapa" class="btn btn--ghost" data-reveal>
+            Ver mapa ↑
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
      CTA
 ========================= -->
 
-<section class="final-cta">
+    <section class="final-cta">
 
-  <p class="section-eyebrow" data-reveal>
-    Santa Rosa de Calamuchita · 2026
-  </p>
+      <p class="section-eyebrow" data-reveal>
+        Santa Rosa de Calamuchita · 2026
+      </p>
 
-  <h2 class="section-title" data-reveal>
-    Ya sabés dónde comienza la misión.
-  </h2>
+      <h2 class="section-title" data-reveal>
+        Ya sabés dónde comienza la misión.
+      </h2>
 
-  <p class="hero__sub" data-reveal>
-    Ahora solo falta que seas parte de ella.
-  </p>
+      <p class="hero__sub" data-reveal>
+        Ahora solo falta que seas parte de ella.
+      </p>
 
-  <a
-    href="https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
-    class="btn btn--primary btn--lg"
-    data-reveal
-  >
-    Confirmar asistencia
-  </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
+        class="btn btn--primary btn--lg" data-reveal>
+        Confirmar asistencia
+      </a>
 
-</section>
+    </section>
 
 
-</main>
+  </main>
 
 
 
-<!-- =========================
+  <!-- =========================
      FOOTER
 ========================= -->
 
-<footer class="footer">
+  <footer class="footer">
 
-  <p>
-    NASA Space Apps Challenge ·
-    Santa Rosa de Calamuchita,
-    Córdoba, Argentina
-  </p>
+    <p>
+      NASA Space Apps Challenge ·
+      Santa Rosa de Calamuchita,
+      Córdoba, Argentina
+    </p>
 
-  <p class="footer__muted">
-    Sitio no oficial de la comunidad local del evento.
-  </p>
+    <p class="footer__muted">
+      Sitio no oficial de la comunidad local del evento.
+    </p>
 
-  <p class="footer__credit">
-    Diseñado y desarrollado por
-    <a
-      href="https://www.instagram.com/nikochittoo"
-      target="_blank"
-      rel="noopener"
-    >
-      @nikochittoo
-    </a>
-  </p>
+    <p class="footer__credit">
+      Diseñado y desarrollado por
+      <a href="https://www.instagram.com/nikochittoo" target="_blank" rel="noopener">
+        @nikochittoo
+      </a>
+    </p>
 
-</footer>
+  </footer>
 
 
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
+
 </html>
