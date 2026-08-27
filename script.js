@@ -176,17 +176,17 @@ resizeCanvas();
 requestAnimationFrame(drawStars);
 
 // ============ CARRUSEL · HACKATHONS ANTERIORES ============
+// Todo modificado
 
 const pastTrack = document.getElementById('pastTrack');
 const pastPrev = document.getElementById('pastPrev');
 const pastNext = document.getElementById('pastNext');
 const pastDots = document.querySelectorAll('#pastDots button');
-const pastEvents = document.querySelectorAll('.past-event');
 
 if (pastTrack && pastPrev && pastNext) {
 
   function getCardWidth() {
-    const card = pastEvents[0];
+    const card = pastTrack.querySelector('.past-event');
 
     if (!card) return 0;
 
@@ -195,36 +195,79 @@ if (pastTrack && pastPrev && pastNext) {
     return card.offsetWidth + gap;
   }
 
+  function getMaxScroll() {
+    return pastTrack.scrollWidth - pastTrack.clientWidth;
+  }
+
+  function getCurrentDotIndex() {
+    const maxScroll = getMaxScroll();
+
+    if (maxScroll <= 0 || pastDots.length <= 1) {
+      return 0;
+    }
+
+    const position = pastTrack.scrollLeft;
+
+    return Math.round(
+      (position / maxScroll) * (pastDots.length - 1)
+    );
+  }
+
+
+  function scrollToDot(index) {
+    const maxScroll = getMaxScroll();
+
+    if (pastDots.length <= 1) {
+      pastTrack.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+
+    const position =
+      (maxScroll / (pastDots.length - 1)) * index;
+
+    pastTrack.scrollTo({
+      left: position,
+      behavior: 'smooth'
+    });
+  }
+
 
   pastNext.addEventListener('click', () => {
 
-    pastTrack.scrollBy({
-      left: getCardWidth(),
-      behavior: 'smooth'
-    });
+    const currentIndex = getCurrentDotIndex();
+
+    const nextIndex = Math.min(
+      currentIndex + 1,
+      pastDots.length - 1
+    );
+
+    scrollToDot(nextIndex);
 
   });
 
 
   pastPrev.addEventListener('click', () => {
 
-    pastTrack.scrollBy({
-      left: -getCardWidth(),
-      behavior: 'smooth'
-    });
+    const currentIndex = getCurrentDotIndex();
+
+    const prevIndex = Math.max(
+      currentIndex - 1,
+      0
+    );
+
+    scrollToDot(prevIndex);
 
   });
+
 
 
   pastDots.forEach((dot, index) => {
 
     dot.addEventListener('click', () => {
-
-      pastTrack.scrollTo({
-        left: index * getCardWidth(),
-        behavior: 'smooth'
-      });
-
+      scrollToDot(index);
     });
 
   });
@@ -232,13 +275,15 @@ if (pastTrack && pastPrev && pastNext) {
 
   pastTrack.addEventListener('scroll', () => {
 
+    const maxScroll = getMaxScroll();
+
+    if (maxScroll <= 0) return;
+
     const position = pastTrack.scrollLeft;
 
-    const cardWidth = getCardWidth();
-
-    if (!cardWidth) return;
-
-    const index = Math.round(position / cardWidth);
+    const index = Math.round(
+      (position / maxScroll) * (pastDots.length - 1)
+    );
 
     pastDots.forEach((dot, i) => {
       dot.classList.toggle(

@@ -16,42 +16,98 @@
 
 <div class="progress-line" id="progressLine"></div>
 
-<header class="nav" id="nav">
-  <a href="#inicio" class="nav__brand">
-    <span class="nav__dot"></span>
-    SPACE&nbsp;APPS <span class="nav__brand-muted">· Santa&nbsp;Rosa</span>
-  </a>
-  <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="nav__links" id="navLinks">
+<!-- =========================
+     NAVBAR
+========================= -->
 
-  <a href="index.html#inicio" class="nav__link">
-    Inicio
-  </a>
+  <header
+    class="nav"
+    id="nav"
+  >
 
-  <a href="agenda.html" class="nav__link">
-    Agenda
-  </a>
+    <a
+      href="index.html"
+      class="nav__brand"
+    >
 
-  <a href="que-es.html" class="nav__link">
+      
+      <img src="img/logo.png" alt="Logo" class="logo">
+
+      <span class="nav__brand-muted">
+        · Santa&nbsp;Rosa de Calamuchita
+      </span>
+
+    </a>
+
+
+    <button
+      class="nav__toggle"
+      id="navToggle"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+    >
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+
+    <nav
+      class="nav__links"
+      id="navLinks"
+    >
+
+      <a
+        href="index.html#inicio"
+        class="nav__link"
+      >
+        Inicio
+      </a>
+
+
+      <a
+        href="agenda.html"
+        class="nav__link"
+      >
+        Agenda
+      </a>
+
+
+      <a href="que-es.html" class="nav__link">
       ¿Que es Space App Challenge NASA?
     </a>
 
-  <a href="organizacion.html" class="nav__link">
-    Organización
-  </a>
 
-  <a href="lugar.html" class="nav__link">
+      <a
+        href="organizacion.html"
+        class="nav__link is-active"
+      >
+        Organización
+      </a>
+
+
+      <a href="lugar.html" class="nav__link">
       Lugar
     </a>
 
-  <a href="index.html#asistir" class="nav__cta">
-    Confirmar asistencia
-  </a>
 
-</nav>
-</header>
+      <a
+        href=" https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
+        class="nav__cta"
+      >
+        Confirmar asistencia
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <main>
+
 
 <main>
 
@@ -69,7 +125,7 @@
         datos abiertos de la NASA en soluciones reales, en equipo, a cielo abierto.
       </p>
       <div class="hero__actions" data-reveal>
-        <a href="#asistir" class="btn btn--primary">Confirmar asistencia</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform" class="btn btn--primary">Confirmar asistencia</a>
         <a href="#agenda" class="btn btn--ghost">Ver la agenda ↓</a>
       </div>
 
@@ -222,14 +278,38 @@
 
   <!-- ORADORES -->
   <section class="speakers" id="oradores">
-    <p class="section-eyebrow" data-reveal>Voces del evento</p>
-    <h2 class="section-title" data-reveal>Oradores</h2>
-    <p class="speakers__note" data-reveal>La lista se confirma a medida que se acerca la fecha.</p>
+    <p class="section-eyebrow" data-reveal>Cabezas del evento</p>
+    <h2 class="section-title" data-reveal>Organizadores</h2>
+    <p class="speakers__note" data-reveal><a href="organizacion.html">Más información</a></p>
     <div class="speakers__grid">
-      <article class="speaker-card" data-reveal><div class="speaker-card__avatar"></div><h3>Por confirmar</h3><p>Información sobre la persona</p></article>
-      <article class="speaker-card" data-reveal><div class="speaker-card__avatar"></div><h3>Por confirmar</h3><p>Información sobre la persona</p></article>
-      <article class="speaker-card" data-reveal><div class="speaker-card__avatar"></div><h3>Por confirmar</h3><p>Información sobre la persona</p></article>
-      <article class="speaker-card" data-reveal><div class="speaker-card__avatar"></div><h3>Por confirmar</h3><p>Información sobre la persona</p></article>
+      <article class="speaker-card" data-reveal>
+  <div class="speaker-card__avatar">
+    <img src="img/cesar.jpg" alt="Foto de Cesar" class="speaker-card__img">
+  </div>
+  <h3>Cesar</h3>
+  <p>Organizador</p>
+</article>
+      <article class="speaker-card" data-reveal>
+  <div class="speaker-card__avatar">
+    <img src="img/Niko.jpeg" alt="Foto de Nicolás" class="speaker-card__img">
+  </div>
+  <h3>Nicolás</h3>
+  <p>Mentor</p>
+</article>
+      <article class="speaker-card" data-reveal>
+  <div class="speaker-card__avatar">
+    <img src="img/Carla.jpeg" alt="Foto de Carla" class="speaker-card__img">
+  </div>
+  <h3>Carla</h3>
+  <p>Mentor</p>
+</article>
+      <article class="speaker-card" data-reveal>
+  <div class="speaker-card__avatar">
+    <img src="img/Valen.jpeg" alt="Foto de Valentín" class="speaker-card__img">
+  </div>
+  <h3>Valentín</h3>
+  <p>Mentor</p>
+</article>
     </div>
   </section>
 
@@ -375,7 +455,7 @@
     <p class="section-eyebrow" data-reveal>Última llamada</p>
     <h2 class="section-title" data-reveal>Queremos saber si vas a estar.</h2>
     <p class="hero__sub" data-reveal>Confirmá tu lugar y sumate a la tripulación.</p>
-    <a href="https://docs.google.com/forms/" class="btn btn--primary btn--lg" data-reveal target="_blank" rel="noopener">Confirmar asistencia</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform" class="btn btn--primary btn--lg" data-reveal target="_blank" rel="noopener">Confirmar asistencia</a>
   </section>
 
 </main>
@@ -395,6 +475,8 @@
   <p class="footer__credit">
     Diseñado y desarrollado por
     <a href="https://www.instagram.com/nikochittoo" target="_blank">@nikochittoo</a>
+    &
+    <a href="https://www.instagram.com/nikochittoo" target="_blank">@thegoblin</a>
   </p>
 
 </footer>
