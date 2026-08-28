@@ -13,6 +13,7 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="img/logo.png">
 </head>
 
 <body>
@@ -95,31 +96,35 @@
 
       <!-- HERO -->
       <section class="hero" id="inicio">
-        <div class="hero__inner">
-          <p class="eyebrow" data-reveal>13 · 14 · 15 de noviembre — 2026</p>
-          <h1 class="hero__title" data-reveal>
-            Tu idea puede salir de<br>
-            <span class="hero__title-accent">Santa Rosa de Calamuchita</span><br>
-            hacia el mundo.
-          </h1>
-          <p class="hero__sub" data-reveal>
-            El hackathon más grande del planeta llega a las sierras. Tres días para transformar
-            datos abiertos de la NASA en soluciones reales, en equipo, a cielo abierto.
-          </p>
-          <div class="hero__actions" data-reveal>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
-              class="btn btn--primary">Confirmar asistencia</a>
-            <a href="#agenda" class="btn btn--ghost">Ver la agenda ↓</a>
-          </div>
+  
+  <!-- CAPA 2: La imagen PNG flotando detrás del texto -->
+  <img src="img/Iglesia.png" alt="Fondo hero" class="hero__bg-png">
 
-          <div class="countdown" id="countdown" data-reveal aria-live="polite">
-            <div class="countdown__item"><span id="cd-days">--</span><small>días</small></div>
-            <div class="countdown__item"><span id="cd-hours">--</span><small>hs</small></div>
-            <div class="countdown__item"><span id="cd-mins">--</span><small>min</small></div>
-            <div class="countdown__item"><span id="cd-secs">--</span><small>seg</small></div>
-          </div>
-        </div>
-      </section>
+  <!-- CAPA 3: Tu contenido actual (Texto, botones, contador) -->
+  <div class="hero__inner">
+    <p class="eyebrow" data-reveal>13 · 14 · 15 de noviembre — 2026</p>
+    <h1 class="hero__title" data-reveal>
+      Tu idea puede salir de<br>
+      <span class="hero__title-accent">Santa Rosa de Calamuchita</span><br>
+      hacia el mundo.
+    </h1>
+    <p class="hero__sub" data-reveal>
+      El hackathon más grande del planeta llega a las sierras. Tres días para transformar
+      datos abiertos de la NASA en soluciones reales, en equipo, a cielo abierto.
+    </p>
+    <div class="hero__actions" data-reveal>
+      <a href="https://docs.google.com/forms/..." class="btn btn--primary">Confirmar asistencia</a>
+      <a href="#agenda" class="btn btn--ghost">Ver la agenda ↓</a>
+    </div>
+
+    <div class="countdown" id="countdown" data-reveal aria-live="polite">
+      <div class="countdown__item"><span id="cd-days">--</span><small>días</small></div>
+      <div class="countdown__item"><span id="cd-hours">--</span><small>hs</small></div>
+      <div class="countdown__item"><span id="cd-mins">--</span><small>min</small></div>
+      <div class="countdown__item"><span id="cd-secs">--</span><small>seg</small></div>
+    </div>
+  </div>
+</section>
 
       <!-- MISIÓN / INTRO -->
       <section class="mission">

@@ -1596,3 +1596,88 @@ img {
     z-index: -1; /* Es clave: lo envía detrás de todos los demás elementos */
     background-color: #000; /* Color base negro mientras cargan las estrellas */
 }
+/* CAPA 1: Tu canvas ya está configurado (asegúrate de que tenga z-index: -2) */
+#starfield {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background-color: #03040b; /* Color de fondo oscuro */
+}
+
+/* =========================================
+   CONTENEDOR HERO
+========================================= */
+.hero {
+  position: relative; 
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* CAMBIO: Tira todo el contenido hacia la izquierda */
+  padding: 0 8%; /* Agrega un margen lateral para que no quede pegado al borde */
+  overflow: hidden; 
+  background: transparent; 
+}
+
+/* =========================================
+   CAPA 2: LA IMAGEN PNG (A la derecha)
+========================================= */
+.hero__bg-png {
+  position: absolute;
+  bottom: -35px; /* Ancla la imagen a la base del contenedor */
+  right: 5%; 
+  z-index: -1; 
+  
+  /* Si la imagen sigue quedando un poco alta, puedes usar valores negativos en bottom, por ejemplo:
+  bottom: -5%; o bottom: -50px; */
+  
+  width: 45%; 
+  max-width: 650px; 
+  opacity: 0.9; 
+  pointer-events: none; 
+}
+
+/* =========================================
+   CAPA 3: TU CONTENIDO TEXTUAL (A la izquierda)
+========================================= */
+.hero__inner {
+  position: relative;
+  z-index: 1; 
+  text-align: left; /* CAMBIO: Alinea todos los textos a la izquierda */
+  max-width: 50%; /* Evita que el texto invada el lado derecho donde está la imagen */
+}
+
+/* Ajuste opcional para la cuenta regresiva si estaba centrada */
+.countdown {
+  justify-content: flex-start; /* Asegura que los números queden alineados a la izquierda */
+}
+
+
+/* =========================================
+   DISEÑO RESPONSIVE (Para celulares)
+========================================= */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center; /* Vuelve a centrar en pantallas chicas */
+    padding-top: 100px; /* Deja espacio para el menú */
+  }
+  
+  .hero__inner {
+    text-align: center; /* Texto centrado en el celular */
+    max-width: 100%;
+  }
+
+  .countdown {
+    justify-content: center;
+  }
+
+  .hero__bg-png {
+    /* En celular la mandamos al fondo centrada y un poco más transparente */
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 80%;
+    opacity: 0.3; /* Más transparente para que deje leer el texto por encima */
+  }
+}
