@@ -374,7 +374,7 @@ img {
 }
 
 .hero__inner {
-  max-width: 760px;
+  max-width: 700px;
   position: relative;
   z-index: 2;
 }
@@ -454,20 +454,6 @@ img {
   height: 260px;
   z-index: 1;
   pointer-events: none;
-}
-
-.mountains {
-  width: 100%;
-  height: 100%;
-}
-
-.mountains__back {
-  fill: #0d1226;
-  opacity: 0.9;
-}
-
-.mountains__front {
-  fill: var(--bg);
 }
 
 /* ============ MISSION ============ */
