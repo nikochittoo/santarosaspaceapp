@@ -369,7 +369,6 @@ img {
   min-height: 92vh;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--line);
   padding: 6vw 6vw;
   overflow: hidden;
 }
@@ -506,7 +505,6 @@ img {
 .mission-intro {
   padding: 90px 6vw;
   background: var(--bg-alt);
-  border-bottom: 1px solid var(--line);
 }
 
 .mission-intro__grid {
@@ -1132,6 +1130,39 @@ img {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* ============ Day Card Lugar ======= */
+.day-card-lugar {
+  background: var(--bg-alt);
+  border: 2px solid var(--bg-card);
+  border-radius: 16px;
+  padding: 28px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.day-card-lugar:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+.day-card-lugar__label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--gold-soft);
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.day-card-lugar__list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.day-card-lugar__list li {
+  margin-bottom: 8px;
 }
 
 /* ============ FINAL CTA ============ */
