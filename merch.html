@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merchandising | SPACE APPS · Santa Rosa de Calamuchita 2026</title>
+  <meta name="description" content="Merchandising oficial del NASA Space Apps Challenge 2026 en Santa Rosa de Calamuchita. Llevate un recuerdo y apoyá el evento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="starfield"></canvas>
+  <div class="progress-line" id="progressLine"></div>
+
+  <header class="nav" id="nav">
+    <a href="index.html" class="nav__brand">
+      <img src="img/logo.png" alt="Logo" class="logo">
+      <span class="nav__brand-muted">
+        · Santa Rosa de Calamuchita
+      </span>
+    </a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="index.html" class="nav__link">Inicio</a>
+      <a href="agenda.html" class="nav__link">Agenda</a>
+      <a href="que-es.html" class="nav__link">¿Que es Space App Challenge NASA?</a>
+      <a href="organizacion.html" class="nav__link">Organización</a>
+      <a href="lugar.html" class="nav__link">Lugar</a>
+      <a href="merchandising.html" class="nav__link is-active">Merch</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform" class="nav__cta">
+        Confirmar asistencia
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="merch-hero" style="min-height: 60vh; padding-bottom: 2rem;">
+      <div class="hero__inner">
+        <p class="eyebrow" data-reveal>Equipamiento para la misión</p>
+        <h1 class="hero__title" data-reveal>
+          Merchandising<br>
+          <span class="hero__title-accent">Oficial 2026</span>
+        </h1>
+        <p class="hero__sub" data-reveal>
+          Llevate un recuerdo del hackathon más grande del planeta. Todo lo recaudado nos ayuda a seguir financiando y mejorando la experiencia del evento.
+        </p>
+      </div>
+
+      <div class="hero__horizon" aria-hidden="true">
+        <svg viewBox="0 0 1440 260" preserveAspectRatio="none" class="mountains">
+          <path class="mountains__back" d="M0,260 L0,140 L180,60 L340,150 L520,40 L700,160 L880,70 L1080,170 L1260,90 L1440,150 L1440,260 Z"/>
+          <path class="mountains__front" d="M0,260 L0,190 L120,140 L260,210 L440,120 L640,220 L820,150 L1000,230 L1200,160 L1440,220 L1440,260 Z"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="agenda" id="catalogo" style="padding-top: 2rem;">
+      <div class="agenda__grid">
+
+        <article class="day-card" data-reveal style="background-image: url('./img/remera.jpg'); min-height: 450px;">
+          <div class="day-card__overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);"></div>
+          
+          <div class="day-card__content">
+            <span class="day-card__label">Indumentaria</span>
+            <h3 style="color: #fff; font-size: 1.5rem; margin: 0.5rem 0;">Remera Oficial Space Apps</h3>
+            <p style="color: #ccc; margin-bottom: 1.5rem; font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem;">$15.000 ARS</p>
+            <a href="#" class="btn btn--primary" style="width: 100%; text-align: center; justify-content: center;">Añadir al carrito</a>
+          </div>
+        </article>
+
+        <article class="day-card" data-reveal style="background-image: url('./img/taza.jpg'); min-height: 450px;">
+          <div class="day-card__overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);"></div>
+          
+          <div class="day-card__content">
+            <span class="day-card__label">Accesorios</span>
+            <h3 style="color: #fff; font-size: 1.5rem; margin: 0.5rem 0;">Taza "Misión Santa Rosa"</h3>
+            <p style="color: #ccc; margin-bottom: 1.5rem; font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem;">$6.500 ARS</p>
+            <a href="#" class="btn btn--primary" style="width: 100%; text-align: center; justify-content: center;">Añadir al carrito</a>
+          </div>
+        </article>
+
+        <article class="day-card" data-reveal style="background-image: url('./img/stickers.jpg'); min-height: 450px;">
+          <div class="day-card__overlay" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);"></div>
+          
+          <div class="day-card__content">
+            <span class="day-card__label">Coleccionables</span>
+            <h3 style="color: #fff; font-size: 1.5rem; margin: 0.5rem 0;">Pack Stickers NASA</h3>
+            <p style="color: #ccc; margin-bottom: 1.5rem; font-family: 'IBM Plex Mono', monospace; font-size: 1.2rem;">$3.000 ARS</p>
+            <a href="#" class="btn btn--primary" style="width: 100%; text-align: center; justify-content: center;">Añadir al carrito</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      NASA Space Apps Challenge ·
+      Santa Rosa de Calamuchita,
+      Córdoba, Argentina
+    </p>
+    <p class="footer__muted">
+      Sitio no oficial de la comunidad local del evento.
+    </p>
+    <p class="footer__credit">
+      Diseñado y desarrollado por
+      <a href="https://www.instagram.com/nikochittoo" target="_blank">@nikochittoo</a>
+      &
+      <a href="https://www.instagram.com/nikochittoo" target="_blank">@thegoblin</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
