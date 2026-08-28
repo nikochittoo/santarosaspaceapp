@@ -1,4 +1,4 @@
-/* ============ TOKENS ============ */
+            /* ============ TOKENS ============ */
 :root {
   --bg: #060911;
   --bg-alt: #0c1122;
@@ -721,6 +721,7 @@ img {
   border-radius: 999px;
   border: 1px solid var(--line);
   color: var(--muted);
+  text-decoration: none;
 }
 
 .badge--accent {
@@ -1579,4 +1580,19 @@ img {
   height: 100%;
   object-fit: cover;
   border-radius: 70%;
+}
+
+.badge a {
+    text-decoration: none;
+    color: inherit; /* Opcional: hace que el enlace tome el color del texto normal en lugar del azul por defecto */
+}
+
+.starfield {
+    position: fixed; /* Lo mantiene fijo aunque el usuario haga scroll */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    z-index: -1; /* Es clave: lo envía detrás de todos los demás elementos */
+    background-color: #000; /* Color base negro mientras cargan las estrellas */
 }
