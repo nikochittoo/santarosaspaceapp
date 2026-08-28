@@ -369,6 +369,7 @@ img {
   min-height: 92vh;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--line);
   padding: 6vw 6vw;
   overflow: hidden;
 }
