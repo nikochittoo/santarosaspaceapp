@@ -1616,7 +1616,6 @@ img {
   display: flex;
   align-items: center;
   justify-content: flex-start; /* CAMBIO: Tira todo el contenido hacia la izquierda */
-  padding: 0 8%; /* Agrega un margen lateral para que no quede pegado al borde */
   overflow: hidden; 
   background: transparent; 
 }
