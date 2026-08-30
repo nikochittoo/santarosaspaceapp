@@ -1615,25 +1615,23 @@ img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* CAMBIO: Tira todo el contenido hacia la izquierda */
+  justify-content: flex-start; /* CAMBIO: Tira todo el bloque hacia la izquierda */
   overflow: hidden; 
   background: transparent; 
+  padding-left: 5%; /* Evita que el texto quede 100% pegado al borde del monitor */
 }
 
 /* =========================================
-   CAPA 2: LA IMAGEN PNG (A la derecha)
+   CAPA 2: LA IMAGEN PNG (Sigue ocupando todo)
 ========================================= */
 .hero__bg-png {
   position: absolute;
-  bottom: -35px; /* Ancla la imagen a la base del contenedor */
-  right: 5%; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene la imagen ocupando todo sin deformarse */
   z-index: -1; 
-  
-  /* Si la imagen sigue quedando un poco alta, puedes usar valores negativos en bottom, por ejemplo:
-  bottom: -5%; o bottom: -50px; */
-  
-  width: 45%; 
-  max-width: 650px; 
   opacity: 0.9; 
   pointer-events: none; 
 }
@@ -1644,39 +1642,75 @@ img {
 .hero__inner {
   position: relative;
   z-index: 1; 
-  text-align: left; /* CAMBIO: Alinea todos los textos a la izquierda */
-  max-width: 50%; /* Evita que el texto invada el lado derecho donde está la imagen */
+  text-align: left; /* CAMBIO: Alinea los textos a la izquierda */
+  width: 100%;
+  max-width: 600px; /* Mantiene el texto agrupado para que no se estire demasiado */
 }
 
-/* Ajuste opcional para la cuenta regresiva si estaba centrada */
+/* Ajuste para la cuenta regresiva */
 .countdown {
-  justify-content: flex-start; /* Asegura que los números queden alineados a la izquierda */
+  display: flex;
+  justify-content: flex-start; /* CAMBIO: Alinea los números a la izquierda */
 }
-
 
 /* =========================================
    DISEÑO RESPONSIVE (Para celulares)
 ========================================= */
 @media (max-width: 768px) {
   .hero {
-    justify-content: center; /* Vuelve a centrar en pantallas chicas */
-    padding-top: 100px; /* Deja espacio para el menú */
+    padding-top: 100px;
+    padding-left: 20px; /* Margen un poco más chico para celulares */
+    justify-content: flex-start; /* Mantiene todo a la izquierda en celular */
   }
   
   .hero__inner {
-    text-align: center; /* Texto centrado en el celular */
-    max-width: 100%;
+    text-align: left; /* Mantiene el texto a la izquierda en celular */
   }
 
   .countdown {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .hero__bg-png {
-    /* En celular la mandamos al fondo centrada y un poco más transparente */
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 80%;
-    opacity: 0.3; /* Más transparente para que deje leer el texto por encima */
+    opacity: 0.4; /* Imagen un poco más transparente en el teléfono para leer bien */
   }
+}
+
+/* Agrega esto en cualquier parte de tu CSS */
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Controla qué tan arriba llega el difuminado (puedes subirlo al 50% o bajarlo al 20%) */
+  z-index: 0; /* Queda justo por encima de la imagen (-1) y por debajo de tu texto (1) */
+  
+  /* Efecto 1: Degradado que va de transparente al color oscuro de tu fondo */
+  background: linear-gradient(to bottom, transparent 0%, #03040b 100%);
+  
+  /* Efecto 2: El desenfoque real (frosted glass) */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Soporte para Safari */
+  
+  /* Hace que el desenfoque en sí sea gradual, evitando un corte brusco */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+  
+  pointer-events: none; /* Asegura que no bloquee los clics en la página */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cubre todo el hero para un degradado más suave */
+  z-index: 0; /* Por encima de la imagen, por debajo del texto */
+  
+  /* Degradado: Empieza sólido abajo, se hace semitransparente al medio y desaparece arriba */
+  background: linear-gradient(to top, #000000 0%, rgba(3, 4, 11, 0.7) 10%, transparent 10%);
+  
+  pointer-events: none; /* Permite hacer clic a través de esta capa */
 }
