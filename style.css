@@ -366,7 +366,7 @@ img {
 /* ============ HERO ============ */
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   padding: 6vw 6vw;
