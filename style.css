@@ -369,7 +369,6 @@ img {
   min-height: 92vh;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--line);
   padding: 6vw 6vw;
   overflow: hidden;
 }
@@ -484,7 +483,7 @@ img {
 .mission__num {
   font-family: var(--font-mono);
   color: var(--gold);
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   flex-shrink: 0;
 }
 
@@ -553,8 +552,6 @@ img {
 /* ============ INFO ============ */
 .info {
   padding: 90px 6vw;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   background: var(--bg-alt);
 }
 
@@ -688,8 +685,6 @@ img {
 .about {
   padding: 110px 6vw;
   background: var(--bg-alt);
-  border-bottom: 1px solid var(--line);
-  border-top: 1px solid var(--line);
   /* modificado */
 }
 
@@ -724,6 +719,24 @@ img {
   text-decoration: none;
 }
 
+.agencia-pais {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.agencia-pais:hover {
+    border-color: var(--color);
+}
+
+.agencia-pais:hover a {
+    color: var(--color);
+}
+
 .badge--accent {
   border-color: var(--gold);
   color: var(--gold-soft);
@@ -733,8 +746,6 @@ img {
 .about-address {
   padding: 110px 6vw;
   background: var(--bg-alt);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
   /* modificado */
 }
 
@@ -759,6 +770,120 @@ img {
   align-content: flex-start;
 }
 
+/* ============ ABOUT QUE ES ============ */
+.about-que-es {
+  padding: 110px 6vw;
+}
+
+.about-que-es__grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-que-es__text {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.about-que-es__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.badge:hover{
+  border-color: var(--gold);
+  color: var(--gold);
+  cursor: default;
+}
+
+.badge--accent {
+  border-color: var(--gold);
+  color: var(--gold-soft);
+}
+
+/* ============ CARDS QUE ES ============ */
+
+.day-card-como-funciona {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+
+  background-color: var(--bg-alt);
+
+  padding: 0;
+
+  border: 1px solid var(--bg-alt);
+  border-radius: 18px;
+}
+
+.day-card-como-funciona:hover {
+  border-color: var(--gold);
+}
+
+/* CONTENIDO */
+
+.day-card-como-funciona__content {
+  position: relative;
+  z-index: 2;
+
+  min-height: 330px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 28px;
+}
+
+
+/* TÍTULO */
+
+.day-card-como-funciona__label {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: var(--gold-soft);
+
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+
+/* LISTA */
+
+.day-card-como-funciona__list {
+  margin: 0;
+  padding-left: 18px;
+
+  color: var(--text);
+}
+
+.day-card-como-funciona__list li {
+  margin-bottom: 8px;
+
+  color: var(--text);
+}
+
+
+
 /* ============ SPEAKERS ============ */
 .speakers {
   padding: 110px 6vw;
@@ -768,7 +893,15 @@ img {
 
 .speakers__note {
   color: var(--muted);
-  margin: 0 0 40px;
+  margin: 40px 0;
+}
+
+.speakers__note a{
+  text-decoration: none;
+}
+
+.speakers__note a:hover{
+  color: var(--gold);
 }
 
 .speakers__grid {
@@ -816,9 +949,9 @@ img {
 
 .past-events {
   padding: 110px 6vw;
-  border-top: 1px solid var(--line);
   background: var(--bg);
   overflow: hidden;
+  border-top: 1px solid var(--line);
 }
 
 .past-events__header {
@@ -1040,9 +1173,7 @@ img {
 /* ============ PLACE ============ */
 .place {
   padding: 110px 6vw;
-  border-top: 1px solid var(--line);
   background: var(--bg-alt);
-  border-bottom: 1px solid var(--line);
   /* modificado */
 }
 
@@ -1082,8 +1213,6 @@ img {
 /* ============ PLACE LUGAR ============ */
 .place-lugar {
   padding: 110px 6vw;
-  border-top: 1px solid var(--line);
-  background: var(--bg-alt);
   /* modificado */
 }
 
@@ -1194,11 +1323,11 @@ img {
 
 /* ============ FOOTER ============ */
 .footer {
-  padding: 40px 6vw;
-  border-top: 1px solid var(--line);
+  padding: 2vw;
   text-align: center;
   color: var(--muted);
   font-size: 0.85rem;
+  background-color: #00000042;
 }
 
 .footer__muted {
@@ -1319,7 +1448,6 @@ img {
 .organization {
   padding: 110px 6vw;
   background: var(--bg);
-  border-bottom: 1px solid var(--line);
 }
 
 
@@ -1582,7 +1710,7 @@ img {
   border-radius: 70%;
 }
 
-.badge a {
+.badge a, .agencia-pais a {
     text-decoration: none;
     color: inherit; /* Opcional: hace que el enlace tome el color del texto normal en lugar del azul por defecto */
 }
