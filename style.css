@@ -1357,10 +1357,23 @@ img {
 
   .about__grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  
+  .about-que-es__grid{
+    grid-template-columns: none;
+    gap: 0;
   }
 
   .place__grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .place-lugar__grid{
+    grid-template-columns: none;
+    gap: 10px;
   }
 
   .speakers__grid {
@@ -1447,7 +1460,7 @@ img {
 
 .organization {
   padding: 110px 6vw;
-  background: var(--bg);
+  background: var(--bg-alt);
 }
 
 
@@ -1805,7 +1818,7 @@ img {
 }
 
 /* Agrega esto en cualquier parte de tu CSS */
-.hero::after {
+.hero-inicio::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1828,7 +1841,7 @@ img {
   pointer-events: none; /* Asegura que no bloquee los clics en la página */
 }
 
-.hero::before {
+.hero-inicio::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1837,8 +1850,7 @@ img {
   height: 100%; /* Cubre todo el hero para un degradado más suave */
   z-index: 0; /* Por encima de la imagen, por debajo del texto */
   
-  /* Degradado: Empieza sólido abajo, se hace semitransparente al medio y desaparece arriba */
-  background: linear-gradient(to top, #000000 0%, rgba(3, 4, 11, 0.7) 10%, transparent 10%);
-  
+  /* Degradado: Empieza sólido abajo, se hace semitransparente al medio y desaparece arriba
+  background: linear-gradient(to top, #000000 0%, rgba(3, 4, 11, 0.7) 10%, transparent 10%); */
   pointer-events: none; /* Permite hacer clic a través de esta capa */
 }
