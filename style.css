@@ -1357,10 +1357,22 @@ img {
 
   .about__grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .about-que-es__grid{
+    grid-template-columns: none;
+    gap: 0;
   }
 
   .place__grid {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .place-lugar__grid{
+    grid-template-columns: none;
+    gap: 10px;
   }
 
   .speakers__grid {
