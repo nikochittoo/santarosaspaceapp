@@ -1360,6 +1360,7 @@ img {
     gap: 10px;
   }
 
+  
   .about-que-es__grid{
     grid-template-columns: none;
     gap: 0;
