@@ -81,7 +81,7 @@ img {
 
 .day-card {
   position: relative;
-  min-height: 300px;
+  min-height: 30px;
   overflow: hidden;
 
   padding: 0;
