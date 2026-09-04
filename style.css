@@ -1709,7 +1709,6 @@ img {
 .speaker-card__avatar {
   width: 120px;
   height: 120px;
-  background-image: url('image_92328e.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 70%;
@@ -1858,6 +1857,7 @@ img {
 /* =========================
    SOCIAL POSTS / NOVEDADES
 ========================= */
+
 .social-posts {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -1866,7 +1866,7 @@ img {
 
 .social-posts__grid {
   display: grid;
-  grid-template-columns: 1fr; /* 1 columna en celulares */
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 3rem;
   justify-items: center;
@@ -1874,30 +1874,35 @@ img {
 
 .social-posts__item {
   width: 100%;
-  max-width: 340px; /* Achicamos el tamaño general (antes 400px) */
+  max-width: 540px;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   padding: 1rem;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centra el posteo si es más corto que los demás */
-  height: 100%; /* Obliga a que las 3 cajas grises midan lo mismo */
+  align-items: flex-start;
+  overflow: hidden;
 }
 
-/* En tablets grandes y computadoras, mostrar 3 columnas */
+.social-posts__item .instagram-media {
+  width: 100% !important;
+  max-width: 540px !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+}
+
+.social-posts__item iframe {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
 @media (min-width: 900px) {
   .social-posts__grid {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
-/* Ajustes para que los iframes de las redes sean responsive */
-/* Forzar tamaño idéntico en los embeds */
-.social-posts__item iframe,
-.social-posts__item blockquote.instagram-media {
-  width: 100% !important;
-  height: 620px !important; /* Ajusta este número si cortan texto o sobra espacio */
-  min-height: 620px !important;
-  border-radius: 8px;
-  margin: 0 !important; /* Quita márgenes por defecto de Instagram */
+  .social-posts__item {
+    max-width: 100%;
+  }
 }
