@@ -1854,3 +1854,50 @@ img {
   background: linear-gradient(to top, #000000 0%, rgba(3, 4, 11, 0.7) 10%, transparent 10%); */
   pointer-events: none; /* Permite hacer clic a través de esta capa */
 }
+
+/* =========================
+   SOCIAL POSTS / NOVEDADES
+========================= */
+.social-posts {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social-posts__grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en celulares */
+  gap: 2rem;
+  margin-top: 3rem;
+  justify-items: center;
+}
+
+.social-posts__item {
+  width: 100%;
+  max-width: 340px; /* Achicamos el tamaño general (antes 400px) */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra el posteo si es más corto que los demás */
+  height: 100%; /* Obliga a que las 3 cajas grises midan lo mismo */
+}
+
+/* En tablets grandes y computadoras, mostrar 3 columnas */
+@media (min-width: 900px) {
+  .social-posts__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Ajustes para que los iframes de las redes sean responsive */
+/* Forzar tamaño idéntico en los embeds */
+.social-posts__item iframe,
+.social-posts__item blockquote.instagram-media {
+  width: 100% !important;
+  height: 620px !important; /* Ajusta este número si cortan texto o sobra espacio */
+  min-height: 620px !important;
+  border-radius: 8px;
+  margin: 0 !important; /* Quita márgenes por defecto de Instagram */
+}
