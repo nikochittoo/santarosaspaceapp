@@ -949,9 +949,8 @@ img {
 
 .past-events {
   padding: 110px 6vw;
-  background: var(--bg);
+  background: var(--bg-alt);
   overflow: hidden;
-  border-top: 1px solid var(--line);
 }
 
 .past-events__header {
