@@ -1,4 +1,4 @@
-            /* ============ TOKENS ============ */
+/* ============ TOKENS ============ */
 :root {
   --bg: #060911;
   --bg-alt: #0c1122;
@@ -1897,6 +1897,21 @@ img {
   border-radius: 8px;
 }
 
+.facebook-video {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 267 / 476;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.facebook-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
 @media (min-width: 900px) {
   .social-posts__grid {
     grid-template-columns: repeat(3, 1fr);
@@ -1904,6 +1919,12 @@ img {
 
   .social-posts__item {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .facebook-video {
+    max-width: 267px;
   }
 }
 
