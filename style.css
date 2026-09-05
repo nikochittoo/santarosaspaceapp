@@ -1906,3 +1906,64 @@ img {
     max-width: 100%;
   }
 }
+
+/* =========================
+   PATROCINADORES - CINTA INFINITA
+========================= */
+.sponsors-ticker {
+  padding: 2rem 0; 
+  background: rgba(217, 221, 223, 0);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.sponsors-ticker__title {
+  text-align: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #717b80;
+  margin-bottom: 0.5rem;
+}
+
+.sponsors-ticker__container {
+  width: 100%;
+  overflow: hidden; 
+  padding: 1rem 0;
+  /* EFECTO FADE: Hace que los logos se desvanezcan en los bordes izquierdo y derecho */
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.sponsors-ticker__track {
+  display: flex;
+  width: max-content;
+  animation: scrollTicker 25s linear infinite;
+}
+
+.sponsors-ticker__track:hover {
+  animation-play-state: paused;
+}
+
+.sponsors-ticker__track img {
+  height: 35px; 
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0; 
+  margin-right: 4rem; /* Separación que no se deforma al hacer zoom */
+  filter: brightness(0) invert(1) opacity(0.6);
+  transition: filter 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.sponsors-ticker__track img:hover {
+  filter: brightness(0) invert(1) opacity(1);
+  transform: scale(1.2);
+}
+
+/* El loop perfecto a la mitad del recorrido */
+@keyframes scrollTicker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
