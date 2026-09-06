@@ -388,7 +388,37 @@
         </div>
       </section>
 
-      <!-- ORADORES -->
+     <style>
+        .speakers__grid {
+          display: flex !important;
+          flex-wrap: wrap;
+          justify-content: center;
+          /* El gap (espacio) original de tu CSS se aplicará normalmente */
+        }
+        
+        /* ESCRITORIO: 4 tarjetas por fila */
+        .speakers__grid .speaker-card {
+          flex: 0 0 calc(25% - 1.5rem); 
+          max-width: calc(25% - 1.5rem);
+        }
+
+        /* TABLET: 2 tarjetas por fila */
+        @media (max-width: 1024px) {
+          .speakers__grid .speaker-card {
+            flex: 0 0 calc(50% - 1rem); 
+            max-width: calc(50% - 1rem);
+          }
+        }
+
+        /* MÓVIL: 1 tarjeta por fila */
+        @media (max-width: 600px) {
+          .speakers__grid .speaker-card {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+      </style>
+
       <section class="speakers" id="oradores">
         <p class="section-eyebrow" data-reveal>Cabezas del evento</p>
         <h2 class="section-title" data-reveal>Organizadores</h2>
@@ -404,7 +434,7 @@
           </article>
           <article class="speaker-card" data-reveal>
             <div class="speaker-card__avatar">
-              <img src="img/Niko.jpeg" loading="lazy" alt="Foto de Nicolás" class="speaker-card__img">
+              <img src="img/Niko.png" loading="lazy" alt="Foto de Nicolás" class="speaker-card__img">
             </div>
             <h3>Nicolás</h3>
             <p>Mentor</p>

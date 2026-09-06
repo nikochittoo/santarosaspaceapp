@@ -19,8 +19,6 @@
     content="Equipo de organización del NASA Space Apps Challenge 2026 · Santa Rosa de Calamuchita."
   >
 
-  <!-- GOOGLE FONTS -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
   <link
@@ -34,35 +32,57 @@
     rel="stylesheet"
   >
 
-  <!-- CSS -->
-
   <link
     rel="stylesheet"
     href="style.css"
   >
   <link rel="icon" type="image/png" href="img/logo.png">
 
+  <style>
+    /* Transformamos la grilla en un contenedor Flex para que centre los sobrantes */
+    .organization__grid {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: center;
+      /* El 'gap' original de tu style.css se mantiene intacto */
+    }
+    
+    /* ESCRITORIO: 4 tarjetas por fila */
+    .organization__grid .organizer-card {
+      flex: 0 0 calc(25% - 1.5rem); 
+      max-width: calc(25% - 1.5rem);
+    }
+
+    /* TABLET: 2 tarjetas por fila (como en tu captura de pantalla a 916px) */
+    @media (max-width: 1024px) {
+      .organization__grid .organizer-card {
+        flex: 0 0 calc(50% - 1rem); 
+        max-width: calc(50% - 1rem);
+      }
+    }
+
+    /* MÓVIL: 1 tarjeta por fila */
+    @media (max-width: 600px) {
+      .organization__grid .organizer-card {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+
 </head>
 
 
 <body>
 
-  <!-- CAMPO DE ESTRELLAS -->
-
   <canvas id="starfield"></canvas>
 
-
-  <!-- PROGRESO DE SCROLL -->
 
   <div
     class="progress-line"
     id="progressLine"
   ></div>
 
-
-  <!-- =========================
-       NAVBAR
-  ========================== -->
 
   <header
     class="nav"
@@ -155,10 +175,6 @@
   <main>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
-
     <section
       class="hero organization-hero"
       id="inicio"
@@ -226,10 +242,6 @@
 
 
 
-    <!-- =========================
-         ORGANIZACIÓN
-    ========================== -->
-
     <section
       class="organization"
       id="organizacion"
@@ -268,311 +280,95 @@
 
 
 
-      <!-- =========================
-           EQUIPO
-      ========================== -->
-
       <div class="organization__grid">
 
-
-        <!-- PERSONA 1 -->
-
-        <article
-          class="organizer-card"
-          data-reveal
-        >
-
+        <article class="organizer-card" data-reveal>
           <div class="organizer-card__image">
-
-            <img
-              src="img/Cesar.jpeg"
-              alt="Nombre del orador 1"
-            >
-
-            <div class="organizer-card__number">
-              01
-            </div>
-
+            <img src="img/Cesar.jpeg" alt="Nombre del orador 1">
+            <div class="organizer-card__number">01</div>
           </div>
-
-
           <div class="organizer-card__content">
-
-            <span class="organizer-card__role">
-              Organización
-            </span>
-
-            <h3>
-              Cesar Pedrocca
-            </h3>
-
-            <p>
-              Técnico Electrónico y Profesor de Educación Tecnológica y Ciencias de la Computación. Docente de Electrónica y Telecomunicaciones, Local Lead de NASA Space Apps Challenge y estudiante de Ingeniería Biomédica. Comprometido con la educación, la tecnología y la innovación.
-            </p>
-
+            <span class="organizer-card__role">Organización</span>
+            <h3>Cesar Pedrocca</h3>
+            <p>Técnico Electrónico y Profesor de Educación Tecnológica y Ciencias de la Computación. Docente de Electrónica y Telecomunicaciones, Local Lead de NASA Space Apps Challenge y estudiante de Ingeniería Biomédica. Comprometido con la educación, la tecnología y la innovación.</p>
           </div>
-
         </article>
 
-
-
-        <!-- PERSONA 2 -->
-
-        <article
-          class="organizer-card"
-          data-reveal
-        >
-
+        <article class="organizer-card" data-reveal>
           <div class="organizer-card__image">
-
-            <img
-              src="img/Niko.jpeg"
-              alt="Nombre del orador 2"
-            >
-
-            <div class="organizer-card__number">
-              02
-            </div>
-
+            <img src="img/Niko.jpeg" alt="Nombre del orador 2">
+            <div class="organizer-card__number">02</div>
           </div>
-
-
           <div class="organizer-card__content">
-
-            <span class="organizer-card__role">
-              Mentoría y organización
-            </span>
-
-            <h3>
-              Nicolás Brito Pedrocca
-            </h3>
-
-            <p>
-             Estudiante del Profesorado de Educación Tecnológica y Técnico Mecánico, con conocimientos en tecnología, programación y desarrollo de páginas web mediante HTML, CSS y JavaScript. Soy fundador de Sacude Tech, un proyecto orientado a la enseñanza y difusión de tecnología y programación. Apasionado por la tecnología, los videojuegos y la cultura digital, me considero una persona responsable, creativa, proactiva y con buena predisposición para trabajar en equipo y adquirir nuevos conocimientos.
-            </p>
-
+            <span class="organizer-card__role">Mentoría y organización</span>
+            <h3>Nicolás Brito Pedrocca</h3>
+            <p>Estudiante del Profesorado de Educación Tecnológica y Técnico Mecánico, con conocimientos en tecnología, programación y desarrollo de páginas web mediante HTML, CSS y JavaScript. Soy fundador de Sacude Tech, un proyecto orientado a la enseñanza y difusión de tecnología y programación. Apasionado por la tecnología, los videojuegos y la cultura digital, me considero una persona responsable, creativa, proactiva y con buena predisposición para trabajar en equipo y adquirir nuevos conocimientos.</p>
           </div>
-
         </article>
 
-
-
-        <!-- PERSONA 3 -->
-
-        <article
-          class="organizer-card"
-          data-reveal
-        >
-
+        <article class="organizer-card" data-reveal>
           <div class="organizer-card__image">
-
-            <img
-              src="img/Carla.jpeg"
-              alt="Nombre del orador 3"
-            >
-
-            <div class="organizer-card__number">
-              03
-            </div>
-
+            <img src="img/Carla.jpeg" alt="Nombre del orador 3">
+            <div class="organizer-card__number">03</div>
           </div>
-
-
           <div class="organizer-card__content">
-
-            <span class="organizer-card__role">
-              Mentoría
-            </span>
-
-            <h3>
-              Carla Fernandez
-            </h3>
-
-            <p>
-              Profesora de Educación Tecnológica, con experiencia y habilidades en el uso de herramientas digitales como Canva, Genially, PowerPoint y Google Slides. Me especializo en el diseño y desarrollo de presentaciones, comunicación oral y acompañamiento de grupos. Me interesa aportar en la organización, creatividad y comunicación de los proyectos, ayudando a los participantes a transformar sus ideas en propuestas claras, atractivas y fáciles de comunicar.
-            </p>
-
+            <span class="organizer-card__role">Mentoría</span>
+            <h3>Carla Fernandez</h3>
+            <p>Profesora de Educación Tecnológica, con experiencia y habilidades en el uso de herramientas digitales como Canva, Genially, PowerPoint y Google Slides. Me especializo en el diseño y desarrollo de presentaciones, comunicación oral y acompañamiento de grupos. Me interesa aportar en la organización, creatividad y comunicación de los proyectos, ayudando a los participantes a transformar sus ideas en propuestas claras, atractivas y fáciles de comunicar.</p>
           </div>
-
         </article>
 
-
-
-        <!-- PERSONA 4 -->
-
-        <article
-          class="organizer-card"
-          data-reveal
-        >
-
+        <article class="organizer-card" data-reveal>
           <div class="organizer-card__image">
-
-            <img
-              src="img/Valen.jpeg"
-              alt="Nombre del orador 4"
-            >
-
-            <div class="organizer-card__number">
-              04
-            </div>
-
+            <img src="img/Valen.jpeg" alt="Nombre del orador 4">
+            <div class="organizer-card__number">04</div>
           </div>
-
-
           <div class="organizer-card__content">
-
-            <span class="organizer-card__role">
-              Mentoría
-            </span>
-
-            <h3>
-              Valentín Saldaño
-            </h3>
-
-            <p>
-              Desarrollador de software en formación, con especial interés en el ecosistema de Python, la programación y la ciberseguridad. También me interesa la investigación y la enseñanza, especialmente a través de clases particulares y el acompañamiento a otras personas en su aprendizaje. Formo parte del equipo de mentoría, donde busco aportar mis conocimientos y ayudar a impulsar proyectos y nuevas ideas dentro del ecosistema tecnológico.
-            </p>
-
+            <span class="organizer-card__role">Mentoría</span>
+            <h3>Valentín Saldaño</h3>
+            <p>Desarrollador de software en formación, con especial interés en el ecosistema de Python, la programación y la ciberseguridad. También me interesa la investigación y la enseñanza, especialmente a través de clases particulares y el acompañamiento a otras personas en su aprendizaje. Formo parte del equipo de mentoría, donde busco aportar mis conocimientos y ayudar a impulsar proyectos y nuevas ideas dentro del ecosistema tecnológico.</p>
           </div>
-
         </article>
 
-
-
-        <!-- PERSONA 5 -->
-
-        <article
-          class="organizer-card"
-          data-reveal
-        >
-
+        <article class="organizer-card" data-reveal>
           <div class="organizer-card__image">
-
-            <img
-              src="img/Nacho.jpeg"
-              alt="Nombre del orador 5"
-            >
-
-            <div class="organizer-card__number">
-              05
-            </div>
-
+            <img src="img/Nacho.jpeg" alt="Nombre del orador 5">
+            <div class="organizer-card__number">05</div>
           </div>
-
-
           <div class="organizer-card__content">
-
-            <span class="organizer-card__role">
-              Mentoría
-            </span>
-
-            <h3>
-              Ignacio Nazario
-            </h3>
-
-            <p>
-              Profesor en Educación Tecnológica y Ciencias de la Computación, con formación en programación, Robótica, IA y ciberseguridad. Certificado en CS50 de Harvard y Junior Cybersecurity Analyst de Cisco. CEO de ED-Hackers, Consultora Educativa
-            </p>
-
+            <span class="organizer-card__role">Mentoría</span>
+            <h3>Ignacio Nazario</h3>
+            <p>Profesor en Educación Tecnológica y Ciencias de la Computación, con formación en programación, Robótica, IA y ciberseguridad. Certificado en CS50 de Harvard y Junior Cybersecurity Analyst de Cisco. CEO de ED-Hackers, Consultora Educativa.</p>
           </div>
-
         </article>
 
-
-
-        <!-- PERSONA 6 -->
-
-        <article
-          class="organizer-card"
-          data-reveal
-        >
-
+        <article class="organizer-card" data-reveal>
           <div class="organizer-card__image">
-
-            <img
-              src="img/Mela.jpeg"
-              alt="Nombre del orador 6"
-            >
-
-            <div class="organizer-card__number">
-              06
-            </div>
-
+            <img src="img/Mela.jpeg" alt="Nombre del orador 6">
+            <div class="organizer-card__number">06</div>
           </div>
-
-
           <div class="organizer-card__content">
-
-            <span class="organizer-card__role">
-              Mentoría
-            </span>
-
-            <h3>
-              Melany Villareal
-            </h3>
-
-            <p>
-              Técnica en Programación y Profesora de Educación Tecnológica y Ciencias de la Computación, con experiencia en robótica, diseño 3D, inteligencia artificial y desarrollo web. Interesada en la tecnología, la innovación y el desarrollo de soluciones creativas.
-            </p>
-
+            <span class="organizer-card__role">Mentoría</span>
+            <h3>Melany Villareal</h3>
+            <p>Técnica en Programación y Profesora de Educación Tecnológica y Ciencias de la Computación, con experiencia en robótica, diseño 3D, inteligencia artificial y desarrollo web. Interesada en la tecnología, la innovación y el desarrollo de soluciones creativas.</p>
           </div>
-
         </article>
 
-
-
-        <!-- PERSONA 7 -->
-
-        <article
-          class="organizer-card"
-          data-reveal
-        >
-
+        <article class="organizer-card" data-reveal>
           <div class="organizer-card__image">
-
-            <img
-              src="img/Ariel.jpeg"
-              alt="Nombre del orador 7"
-            >
-
-            <div class="organizer-card__number">
-              07
-            </div>
-
+            <img src="img/Ariel.jpeg" alt="Nombre del orador 7">
+            <div class="organizer-card__number">07</div>
           </div>
-
-
           <div class="organizer-card__content">
-
-            <span class="organizer-card__role">
-              Mentoría
-            </span>
-
-            <h3>
-              Ariel Corte
-            </h3>
-
-            <p>
-              Desarrollador de software y técnico electrónico. 
-Trabajo en Robotic Crew, donde gestiono la operación de robots y flotas autónomas: que funcionen bien en el campo, detectar fallas y resolverlas. También desarrollo software con ROS2 y trabajo en hardware: diseño de circuitos, modelado e impresión 3D.
-            </p>
-
+            <span class="organizer-card__role">Mentoría</span>
+            <h3>Ariel Corte</h3>
+            <p>Desarrollador de software y técnico electrónico. Trabajo en Robotic Crew, donde gestiono la operación de robots y flotas autónomas: que funcionen bien en el campo, detectar fallas y resolverlas. También desarrollo software con ROS2 y trabajo en hardware: diseño de circuitos, modelado e impresión 3D.</p>
           </div>
-
         </article>
 
+      </div> </section>
 
 
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CTA
-    ========================== -->
 
     <section class="final-cta">
 
@@ -615,11 +411,7 @@ Trabajo en Robotic Crew, donde gestiono la operación de robots y flotas autóno
 
   </main>
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
- <footer class="footer">
+  <footer class="footer">
 
   <p>
     NASA Space Apps Challenge ·
@@ -638,8 +430,6 @@ Trabajo en Robotic Crew, donde gestiono la operación de robots y flotas autóno
       <a href="https://www.linkedin.com/in/valentin-salda%C3%B1o-aab18125a/" target="_blank">@valen</a>
     </p>
 </footer>
-
-  <!-- JS -->
 
   <script src="script.js"></script>
 
