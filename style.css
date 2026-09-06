@@ -894,6 +894,7 @@ img {
 .speakers__note {
   color: var(--muted);
   margin: 40px 0;
+  text-align: center;
 }
 
 .speakers__note a{
