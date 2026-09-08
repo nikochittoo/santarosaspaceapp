@@ -1388,7 +1388,7 @@ img {
 
   .nav__links {
     position: fixed;
-    top: 64px;
+    top: 0;
     left: 0;
     right: 0;
     background: var(--bg-alt);
@@ -1403,6 +1403,7 @@ img {
 
   .nav__links.is-open {
     transform: translateY(0);
+    top: 97px;
   }
 
   .nav__cta {
