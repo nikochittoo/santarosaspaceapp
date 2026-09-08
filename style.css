@@ -1988,3 +1988,11 @@ img {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+#ropa {
+  background-image: url(./img/ropa.jpg);
+}
+
+#ropa:hover {
+  background-image: url(./img/ropa-negra.jpg);
+}
