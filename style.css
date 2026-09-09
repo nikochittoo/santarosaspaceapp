@@ -1997,3 +1997,11 @@ img {
 #ropa:hover {
   background-image: url(./img/ropa-negra.jpg);
 }
+
+.precio {
+  text-align: left;
+}
+
+.precio p{
+  flex-direction: row;
+}
