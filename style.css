@@ -2203,4 +2203,11 @@ img {
 
 .social-link:hover {
   background-color: #2c3245; /* Color al pasar el mouse */
+
+.precio {
+  text-align: left;
+}
+
+.precio p{
+  flex-direction: row;
 }
