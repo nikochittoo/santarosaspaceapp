@@ -392,8 +392,7 @@ img {
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 0 auto;
-  margin-top: 0; 
+  margin: 8vw auto;
   padding-top: 0;
   max-width: 800px; /* Evita que el texto se estire demasiado en pantallas grandes */
   padding: 0 1.5rem; /* Margen de seguridad para celulares */
@@ -1790,7 +1789,6 @@ img {
 
 .hero__otros {
   position: relative; 
-  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: flex-start; /* CAMBIO: Tira todo el bloque hacia la izquierda */
@@ -2255,4 +2253,11 @@ img {
 .sponsors-ticker__organizador img:hover {
   filter: brightness(0) invert(1) opacity(1);
   transform: scale(1.2);
+}
+
+.merch__card {
+  padding: 110px 6vw;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--bg-alt);
 }
