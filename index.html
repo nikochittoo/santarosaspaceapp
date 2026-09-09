@@ -28,7 +28,7 @@
 
   <header class="nav" id="nav">
 
-    <a href="index.html" class="nav__brand">
+    <a href="/" class="nav__brand">
 
 
       <img src="img/logo.png" alt="Logo" class="logo">
@@ -42,7 +42,7 @@
 
     <nav class="nav__links" id="navLinks">
 
-      <a href="index.html" class="nav__link">
+      <a href="/" class="nav__link">
         Inicio
       </a>
 
@@ -100,29 +100,43 @@
         <img src="img/Fondo mega ultra.png" fetchpriority="high" alt="Fondo hero" class="hero__bg-png">
 
     
-        <!-- CAPA 3: Tu contenido actual (Texto, botones, contador) -->
+        <!-- CAPA 3: Contenido pulido del Hero -->
         <div class="hero__inner">
-          <p class="eyebrow" data-reveal>13 · 14 · 15 de noviembre — 2026</p>
-          <h1 class="hero__title" data-reveal>
-            Tu idea puede salir de<br>
-            <span class="hero__title-accent">Santa Rosa de Calamuchita</span><br>
-            hacia el mundo.
-          </h1>
-          <p class="hero__sub" data-reveal>
-            El hackathon más grande del planeta llega a las sierras. Tres días para transformar
-            datos abiertos de la NASA en soluciones reales, en equipo, a cielo abierto.
-          </p>
-          <div class="hero__actions" data-reveal>
-            <a href="https://docs.google.com/forms/..." class="btn btn--primary">Confirmar asistencia</a>
-            <a href="#agenda" class="btn btn--ghost">Ver la agenda ↓</a>
+          
+          <!-- Etiqueta superior estilo "Estado de Misión" -->
+          <div class="hero__status" data-reveal>
+            <span class="status-dot"></span> ESTADO: INSCRIPCIONES ABIERTAS
           </div>
 
-          <div class="countdown" id="countdown" data-reveal aria-live="polite">
-            <div class="countdown__item"><span id="cd-days">--</span><small>días</small></div>
-            <div class="countdown__item"><span id="cd-hours">--</span><small>hs</small></div>
-            <div class="countdown__item"><span id="cd-mins">--</span><small>min</small></div>
-            <div class="countdown__item"><span id="cd-secs">--</span><small>seg</small></div>
+          <p class="eyebrow" data-reveal>13 · 14 · 15 de noviembre — 2026</p>
+          
+          <h1 class="hero__title" data-reveal>
+            Tu idea puede salir de
+            <span class="hero__title-accent">Santa Rosa de Calamuchita</span>
+            hacia el mundo.
+          </h1>
+          
+          <p class="hero__sub" data-reveal>
+            El hackathon más grande del planeta llega a las sierras. 48 horas continuas para transformar datos abiertos de la NASA en soluciones reales, en equipo y a cielo abierto.
+          </p>
+          
+          <!-- Botones de Acción -->
+          <div class="hero__actions" data-reveal>
+            <a href="[https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform](https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform)" class="btn btn--primary" target="_blank">Inscribirse Gratis</a>
+            <a href="#agenda" class="btn btn--ghost">Descubrir la Misión ↓</a>
           </div>
+
+          <!-- Cuenta Regresiva -->
+          <div class="countdown-wrapper" data-reveal>
+            <p class="countdown-title">El despegue comienza en:</p>
+            <div class="countdown" id="countdown" aria-live="polite">
+              <div class="countdown__item"><span id="cd-days">--</span><small>Días</small></div>
+              <div class="countdown__item"><span id="cd-hours">--</span><small>Horas</small></div>
+              <div class="countdown__item"><span id="cd-mins">--</span><small>Minutos</small></div>
+              <div class="countdown__item"><span id="cd-secs">--</span><small>Segundos</small></div>
+            </div>
+          </div>
+          
         </div>
       </section>
 
@@ -675,6 +689,65 @@
         </div>
       </section>
 
+      <!-- PREGUNTAS FRECUENTES (FAQ) -->
+      <section class="faq" id="faq">
+        <p class="section-eyebrow" data-reveal>Resolvemos tus dudas</p>
+        <h2 class="section-title" data-reveal>Preguntas Frecuentes</h2>
+
+        <div class="faq__container" data-reveal>
+          
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              ¿Necesito saber programar para participar?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>¡Para nada! En Space Apps buscamos equipos multidisciplinarios. Necesitamos diseñadores, comunicadores, educadores, artistas, emprendedores y entusiastas del espacio. Las mejores soluciones nacen de mezclar diferentes habilidades.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              ¿Tiene algún costo la inscripción?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>El evento es 100% gratuito. Gracias a nuestros patrocinadores y a la organización local, participar no tiene ningún costo. La filosofía de Space Apps es mantener el conocimiento y la participación abierta a todos.</p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              ¿Cómo formo mi equipo?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Puedes venir con tu equipo ya formado (recomendamos de 4 a 6 personas) o venir solo y nosotros te encontramos un grupo que se amolde a tus ideas. </p>
+            </div>
+          </div>
+
+          <div class="faq__item">
+            <button class="faq__question" aria-expanded="false">
+              ¿Qué debo llevar al evento?
+              <span class="faq__icon">+</span>
+            </button>
+            <div class="faq__answer">
+              <p>Traer ropa cómoda, tu botella de agua y equipo de mate. Te recomendamos traer también una computadora portátil y cargador si tienes.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+     <!-- CONTACTO DIRECTO -->
+      <div class="contacto-directo" data-reveal>
+        <p class="contacto-directo__texto">¿Tenés más dudas? Escribinos directamente:</p>
+        <a href="mailto:cesarpedrocca@nasaspaceapp-argentina.com?subject=Consulta%20-%20Space%20Apps%20Santa%20Rosa%202026&body=Hola%20equipo%20de%20Space%20Apps%2C%0A%0ATengo%20la%20siguiente%20consulta%3A%0A" 
+           class="contacto-directo__email">
+          <span class="email-icon">✉</span> cesarpedrocca@nasaspaceapp-argentina.com
+        </a>
+      </div>
+
       <!-- LUGAR -->
       <section class="place" id="lugar">
         <div class="place__grid">
@@ -706,6 +779,54 @@
     </main>
   </main>
 
+ <div class="sponsors-ticker">
+    <p class="sponsors-ticker__title">Organizadores</p>
+    
+    <div class="sponsors-ticker__container">
+      <div class="sponsors-ticker__track">
+        
+        <!-- Set 1 -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link">
+          <img src="img/Nostrvs.png" alt="Nostrvs">
+        </a>
+        <!-- Set 2 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+       
+        <!-- Set 3 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+        <!-- Set 4 (Copia exacta) -->
+        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
+        
+
+      </div>
+    </div>
+  </div>
+
 <!-- PATROCINADORES - CINTA INFINITA -->
   <div class="sponsors-ticker">
     <p class="sponsors-ticker__title">Patrocinadores</p>
@@ -732,9 +853,6 @@
         <a href="https://ciiecca.org.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link">
           <img src="img/Ciiecca.png" alt="CIIECCA">
         </a>
-        <a href="#" target="_blank" rel="noopener" class="sponsors-ticker__link">
-          <img src="img/Nostrvs.png" alt="Nostrvs">
-        </a>
         <a href="https://municipiosantarosa.gob.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link">
           <img src="img/santa-rosa.png" alt="Municipalidad de Santa Rosa">
         </a>
@@ -746,7 +864,6 @@
         <a href="https://cytcordoba.cba.gov.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Secretaria.png" alt="Secretaría"></a>
         <a href="https://asetec.com.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Asetec.png" alt="Asetec"></a>
         <a href="https://ciiecca.org.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Ciiecca.png" alt="CIIECCA"></a>
-        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
         <a href="https://www.santarosamuni.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/santa-rosa.png" alt="Santa Rosa"></a>
 
         <!-- Set 3 (Copia exacta) -->
@@ -756,7 +873,6 @@
         <a href="https://cytcordoba.cba.gov.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Secretaria.png" alt="Secretaría"></a>
         <a href="https://asetec.com.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Asetec.png" alt="Asetec"></a>
         <a href="https://ciiecca.org.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Ciiecca.png" alt="CIIECCA"></a>
-        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
         <a href="https://www.santarosamuni.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/santa-rosa.png" alt="Santa Rosa"></a>
 
         <!-- Set 4 (Copia exacta) -->
@@ -766,7 +882,6 @@
         <a href="https://cytcordoba.cba.gov.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Secretaria.png" alt="Secretaría"></a>
         <a href="https://asetec.com.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Asetec.png" alt="Asetec"></a>
         <a href="https://ciiecca.org.ar/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Ciiecca.png" alt="CIIECCA"></a>
-        <a href="https://www.nostrvs.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/Nostrvs.png" alt="Nostrvs"></a>
         <a href="https://www.santarosamuni.com/" target="_blank" rel="noopener" class="sponsors-ticker__link"><img src="img/santa-rosa.png" alt="Santa Rosa"></a>
 
 

@@ -369,32 +369,40 @@ img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 6vw 6vw;
+  padding: 5vw 5vw;
   overflow: hidden;
+  padding-top: 5rem !important;
 }
 
 .hero__inner {
-  max-width: 700px;
-  position: relative;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0; 
+  padding-top: 0;
+  max-width: 800px; /* Evita que el texto se estire demasiado en pantallas grandes */
+  padding: 0 1.5rem; /* Margen de seguridad para celulares */
 }
-
 .eyebrow {
   font-family: var(--font-mono);
   color: var(--teal);
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.82rem;
-  margin: 0 0 18px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem; /* Achica el espacio debajo de la fecha */
 }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 6vw, 4.4rem);
-  line-height: 1.06;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
   font-weight: 700;
   margin: 0 0 22px;
   letter-spacing: -0.01em;
+  margin-bottom: 0.2rem;
 }
 
 .hero__title-accent {
@@ -402,26 +410,31 @@ img {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
 }
 
 .hero__sub {
   color: var(--muted);
   font-size: 1.1rem;
-  max-width: 560px;
+  max-width: 600px;
   margin: 0 0 34px;
+  margin-bottom: 1.5rem;
 }
 
 .hero__actions {
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 56px;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Espacio entre los botones, ajustalo a tu gusto */
+  flex-wrap: wrap; /* Por si en celulares no entran en una sola línea */
+  margin-top: 1rem;
 }
 
 .countdown {
   display: flex;
   gap: 22px;
   margin-bottom: 36px;
+  align-items: center;
 }
 
 .countdown__item {
@@ -1760,6 +1773,7 @@ img {
   overflow: hidden; 
   background: transparent; 
   padding-left: 5%; /* Evita que el texto quede 100% pegado al borde del monitor */
+  text-align: center;
 }
 
 /* =========================================
@@ -1821,6 +1835,7 @@ img {
 .hero-inicio::after {
   content: "";
   position: absolute;
+  text-align: center;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1988,12 +2003,4 @@ img {
 @keyframes scrollTicker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
-}
-
-#ropa {
-  background-image: url(./img/ropa.jpg);
-}
-
-#ropa:hover {
-  background-image: url(./img/ropa-negra.jpg);
 }

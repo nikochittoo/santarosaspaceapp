@@ -292,3 +292,24 @@ document.querySelectorAll('.nav__link').forEach(link => {
     link.classList.remove('is-active');
   }
 });
+
+/* =========================
+   FAQ ACORDEÓN
+========================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const faqQuestions = document.querySelectorAll('.faq__question');
+
+  faqQuestions.forEach(question => {
+    question.addEventListener('click', () => {
+      const isExpanded = question.getAttribute('aria-expanded') === 'true';
+      
+      // Cerrar todos los demás primero (Opcional, si quieres que solo haya uno abierto a la vez)
+      faqQuestions.forEach(q => q.setAttribute('aria-expanded', 'false'));
+
+      // Alternar el estado del actual
+      if (!isExpanded) {
+        question.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+});
