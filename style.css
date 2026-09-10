@@ -2027,35 +2027,35 @@ img {
 }
 
 #ropa {
-  background-image: url(./img/ropa.jpg);
+  background-image: url(./img/merch-articulos/ropa.jpg);
 }
 
 #ropa:hover {
-  background-image: url(./img/ropa2.jpg);
+  background-image: url(./img/merch-articulos/ropa2.jpg);
 }
 
 #ropa-negra {
-  background-image: url(./img/ropa-negra.jpg);
+  background-image: url(./img/merch-articulos/ropa-negra.jpg);
 }
 
 #ropa-negra:hover {
-  background-image: url(./img/ropa3.jpg);
+  background-image: url(./img/merch-articulos/ropa3.jpg);
 }
 
 #taza {
-  background-image: url(./img/Taza.jpg);
+  background-image: url(./img/merch-articulos/Taza.jpg);
 }
 
 #taza:hover {
-  background-image: url(./img/taza2.jpg);
+  background-image: url(./img/merch-articulos/taza2.jpg);
 }
 
 #combo {
-  background-image: url(./img/ropa.jpg);
+  background-image: url(./img/merch-articulos/ropa.jpg);
 }
 
 #combo:hover {
-  background-image: url(./img/Taza.jpg);
+  background-image: url(./img/merch-articulos/Taza.jpg);
 }
 
 /* =========================
