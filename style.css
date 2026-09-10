@@ -2031,7 +2031,31 @@ img {
 }
 
 #ropa:hover {
+  background-image: url(./img/ropa2.jpg);
+}
+
+#ropa-negra {
   background-image: url(./img/ropa-negra.jpg);
+}
+
+#ropa-negra:hover {
+  background-image: url(./img/ropa3.jpg);
+}
+
+#taza {
+  background-image: url(./img/Taza.jpg);
+}
+
+#taza:hover {
+  background-image: url(./img/taza2.jpg);
+}
+
+#combo {
+  background-image: url(./img/ropa.jpg);
+}
+
+#combo:hover {
+  background-image: url(./img/Taza.jpg);
 }
 
 /* =========================
