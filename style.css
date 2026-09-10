@@ -78,7 +78,6 @@ img {
 }
 
 /* ============ CARDS DE AGENDA CON IMAGEN ============ */
-
 .day-card {
   position: relative;
   min-height: 30px;
@@ -100,7 +99,6 @@ img {
 }
 
 /* OSCURECER LA IMAGEN */
-
 .day-card__overlay {
   position: absolute;
   inset: 0;
@@ -114,9 +112,7 @@ img {
   z-index: 1;
 }
 
-
 /* CONTENIDO */
-
 .day-card__content {
   position: relative;
   z-index: 2;
@@ -132,7 +128,6 @@ img {
 
 
 /* TÍTULO */
-
 .day-card__label {
   display: block;
 
@@ -147,7 +142,6 @@ img {
 
 
 /* LISTA */
-
 .day-card__list {
   margin: 0;
   padding-left: 18px;
@@ -163,7 +157,6 @@ img {
 
 
 /* LINK */
-
 .day-card__link {
   display: inline-block;
 
@@ -188,9 +181,7 @@ img {
   transform: translateX(4px);
 }
 
-
 /* HOVER */
-
 .day-card:hover {
   transform: translateY(-6px);
 
@@ -458,7 +449,6 @@ img {
 
 .countdown__item span {
   font-size: 3rem;
-  /* modificado */
   font-weight: 600;
   color: var(--text);
 }
@@ -466,7 +456,6 @@ img {
 .countdown__item small {
   color: var(--muted);
   font-size: 1rem;
-  /* modificado */
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -481,74 +470,16 @@ img {
   pointer-events: none;
 }
 
-/* ============ MISSION ============ */
-.mission {
-  padding: 90px 6vw;
-  background: var(--bg-alt);
-}
-
-.mission__grid {
-  max-width: var(--container);
-  margin: 0 auto;
-  display: grid;
-  gap: 26px;
-}
-
-.mission__line {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-  font-weight: 500;
-  color: var(--text);
-  display: flex;
-  gap: 18px;
-  align-items: baseline;
-  margin: 0;
-}
-
-.mission__num {
-  font-family: var(--font-mono);
-  color: var(--gold);
-  font-size: 1.5rem;
-  flex-shrink: 0;
-}
-
-/* ============ MISSION INTRO ============ */
-.mission-intro {
-  padding: 90px 6vw;
-  background: var(--bg-alt);
-}
-
-.mission-intro__grid {
-  max-width: var(--container);
-  margin: 0 auto;
-  display: grid;
-  gap: 26px;
-}
-
-.mission-intro__line {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-  font-weight: 500;
-  color: var(--text);
-  display: flex;
-  gap: 18px;
-  align-items: baseline;
-  margin: 0;
-}
-
-.mission-intro__num {
-  font-family: var(--font-mono);
-  color: var(--gold);
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-
-/* ============ MISSION LUGAR ============ */
+/* ============ MISSION, MISSION INTRO Y MISSION LUGAR ============ */
+.mission,
+.mission-intro,
 .mission-lugar {
   padding: 90px 6vw;
   background: var(--bg-alt);
 }
 
+.mission__grid,
+.mission-intro__grid,
 .mission-lugar__grid {
   max-width: var(--container);
   margin: 0 auto;
@@ -556,6 +487,8 @@ img {
   gap: 26px;
 }
 
+.mission__line,
+.mission-intro__line,
 .mission-lugar__line {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 2.6vw, 1.7rem);
@@ -565,6 +498,14 @@ img {
   gap: 18px;
   align-items: baseline;
   margin: 0;
+}
+
+.mission__num,
+.mission-intro__num {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 .mission-lugar__num {
@@ -706,14 +647,20 @@ img {
   margin-bottom: 8px;
 }
 
-/* ============ ABOUT ============ */
-.about {
+/* ============ ABOUT, ABOUT ADDRESS ============ */
+.about,
+.about-address {
   padding: 110px 6vw;
   background: var(--bg-alt);
-  /* modificado */
 }
 
-.about__grid {
+.about-que-es {
+  padding: 110px 6vw;
+}
+
+.about__grid,
+.about-address__grid,
+.about-que-es__grid {
   max-width: var(--container);
   margin: 0 auto;
   display: grid;
@@ -722,28 +669,23 @@ img {
   align-items: start;
 }
 
-.about__text {
+.about__text,
+.about-address__text,
+.about-que-es__text {
   color: var(--muted);
   margin-bottom: 16px;
 }
 
-.about__badges {
+.about__badges,
+.about-address__badges,
+.about-que-es__badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   align-content: flex-start;
 }
 
-.badge {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  color: var(--muted);
-  text-decoration: none;
-}
-
+/* ============ AGENCIA PAIS ============ */
 .agencia-pais {
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -762,65 +704,7 @@ img {
     color: var(--color);
 }
 
-.badge--accent {
-  border-color: var(--gold);
-  color: var(--gold-soft);
-}
-
-/* ============ ABOUT ADDRESS ============ */
-.about-address {
-  padding: 110px 6vw;
-  background: var(--bg-alt);
-  /* modificado */
-}
-
-.about-address__grid {
-  max-width: var(--container);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.about-address__text {
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-
-.about-address__badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-content: flex-start;
-}
-
-/* ============ ABOUT QUE ES ============ */
-.about-que-es {
-  padding: 110px 6vw;
-}
-
-.about-que-es__grid {
-  max-width: var(--container);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.about-que-es__text {
-  color: var(--muted);
-  margin-bottom: 16px;
-}
-
-.about-que-es__badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-content: flex-start;
-}
-
+/* ============ BADGE ============ */
 .badge {
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -842,8 +726,12 @@ img {
   color: var(--gold-soft);
 }
 
-/* ============ CARDS QUE ES ============ */
+.badge a, .agencia-pais a {
+    text-decoration: none;
+    color: inherit; /* Opcional: hace que el enlace tome el color del texto normal en lugar del azul por defecto */
+}
 
+/* ============ CARDS QUE ES ============ */
 .day-card-como-funciona {
   position: relative;
   min-height: 300px;
@@ -876,7 +764,6 @@ img {
   padding: 28px;
 }
 
-
 /* TÍTULO */
 
 .day-card-como-funciona__label {
@@ -890,7 +777,6 @@ img {
   font-size: 1.15rem;
   font-weight: 700;
 }
-
 
 /* LISTA */
 
@@ -906,8 +792,6 @@ img {
 
   color: var(--text);
 }
-
-
 
 /* ============ SPEAKERS ============ */
 .speakers {
@@ -965,7 +849,6 @@ img {
   margin: 0;
 }
 
-/* modificado */
 .speaker-card:hover {
   transform: translateY(-4px);
   border-color: var(--gold);
@@ -1008,15 +891,10 @@ img {
   display: flex;
   gap: 20px;
   padding-top: 20px;
-  /* modificado */
-
   width: 100%;
-
   overflow-x: auto;
   scroll-behavior: smooth;
-
   scrollbar-width: none;
-
   scroll-snap-type: x mandatory;
 }
 
@@ -1195,52 +1073,17 @@ img {
   opacity: 1;
 }
 
-/* ============ PLACE ============ */
-.place {
-  padding: 110px 6vw;
-  background: var(--bg-alt);
-  /* modificado */
-}
-
-.place__grid {
-  max-width: var(--container);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.place__address {
-  font-family: var(--font-mono);
-  color: var(--gold-soft);
-  font-size: 0.95rem;
-  margin: 0 0 18px;
-}
-
-.place__text {
-  color: var(--muted);
-}
-
-.place__map {
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  aspect-ratio: 4/3;
-}
-
-.place__map iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-
-/* ============ PLACE LUGAR ============ */
+/* ============ PLACE Y PLACE LUGAR ============ */
+.place,
 .place-lugar {
   padding: 110px 6vw;
-  /* modificado */
 }
 
+.place {
+  background: var(--bg-alt);
+}
+
+.place__grid,
 .place-lugar__grid {
   max-width: var(--container);
   margin: 0 auto;
@@ -1250,6 +1093,7 @@ img {
   align-items: center;
 }
 
+.place__address,
 .place-lugar__address {
   font-family: var(--font-mono);
   color: var(--gold-soft);
@@ -1257,10 +1101,12 @@ img {
   margin: 0 0 18px;
 }
 
+.place__text,
 .place-lugar__text {
   color: var(--muted);
 }
 
+.place__map,
 .place-lugar__map {
   border-radius: 16px;
   overflow: hidden;
@@ -1268,7 +1114,8 @@ img {
   aspect-ratio: 4/3;
 }
 
-.place-lugar__map iframe {
+.place__map iframe,
+.place-lugar iframe {
   width: 100%;
   height: 100%;
   border: 0;
@@ -1370,114 +1217,6 @@ img {
 [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
-}
-
-
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 900px) {
-  .agenda__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about__grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  
-  .about-que-es__grid{
-    grid-template-columns: none;
-    gap: 0;
-  }
-
-  .place__grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-
-  .place-lugar__grid{
-    grid-template-columns: none;
-    gap: 10px;
-  }
-
-  .speakers__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 720px) {
-  .nav__toggle {
-    display: flex;
-  }
-
-  .nav__links {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: var(--bg-alt);
-    border-bottom: 1px solid var(--line);
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px 6vw 30px;
-    gap: 18px;
-    transform: translateY(-120%);
-    transition: transform 0.3s ease;
-  }
-
-  .nav__links.is-open {
-    transform: translateY(0);
-    top: 97px;
-  }
-
-  .nav__cta {
-    align-self: flex-start;
-  }
-
-  .countdown {
-    gap: 14px;
-  }
-
-  .countdown__item span {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 900px) {
-
-  .past-event {
-    flex: 0 0 75%;
-  }
-
-}
-
-
-@media (max-width: 720px) {
-
-  .past-events {
-    padding: 80px 6vw;
-  }
-
-  .past-events__carousel {
-    gap: 8px;
-  }
-
-  .past-events__button {
-    display: none;
-  }
-
-  .past-event {
-    flex: 0 0 88%;
-    height: 320px;
-  }
-
-  .past-event__content {
-    left: 22px;
-    right: 22px;
-    bottom: 22px;
-  }
-
 }
 
 /* =====================================================
@@ -1681,41 +1420,7 @@ img {
   min-height: 78vh;
 }
 
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 1100px) {
-
-  .organization__grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
-  }
-
-}
-
-
-@media (max-width: 720px) {
-
-  .organization {
-    padding: 80px 6vw;
-  }
-
-
-  .organization__grid {
-    grid-template-columns: 1fr;
-
-    gap: 18px;
-  }
-
-
-  .organizer-card__image {
-    height: 320px;
-  }
-
-}
-
+/* ============ FOOTER ============ */
 .footer__credit {
   margin-top: 12px;
   font-size: 0.85rem;
@@ -1732,6 +1437,7 @@ img {
   text-decoration: underline;
 }
 
+/* ============ SPEAKER CARD ============ */
 .speaker-card__avatar {
   width: 120px;
   height: 120px;
@@ -1748,11 +1454,7 @@ img {
   border-radius: 70%;
 }
 
-.badge a, .agencia-pais a {
-    text-decoration: none;
-    color: inherit; /* Opcional: hace que el enlace tome el color del texto normal en lugar del azul por defecto */
-}
-
+/* ============ STARFIELD ============ */
 .starfield {
     position: fixed; /* Lo mantiene fijo aunque el usuario haga scroll */
     top: 0;
@@ -1828,29 +1530,6 @@ img {
   justify-content: flex-start; /* CAMBIO: Alinea los números a la izquierda */
 }
 
-/* =========================================
-   DISEÑO RESPONSIVE (Para celulares)
-========================================= */
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 100px;
-    padding-left: 20px; /* Margen un poco más chico para celulares */
-    justify-content: flex-start; /* Mantiene todo a la izquierda en celular */
-  }
-  
-  .hero__inner {
-    text-align: left; /* Mantiene el texto a la izquierda en celular */
-  }
-
-  .countdown {
-    justify-content: flex-start;
-  }
-
-  .hero__bg-png {
-    opacity: 0.4; /* Imagen un poco más transparente en el teléfono para leer bien */
-  }
-}
-
 /* Agrega esto en cualquier parte de tu CSS */
 .hero-inicio::after {
   content: "";
@@ -1904,7 +1583,7 @@ img {
 
 .social-posts__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 3rem;
   justify-items: center;
@@ -1948,22 +1627,6 @@ img {
     height: 100%;
     border: none;
     display: block;
-}
-
-@media (min-width: 900px) {
-  .social-posts__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .social-posts__item {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .facebook-video {
-    max-width: 267px;
-  }
 }
 
 /* =========================
@@ -2026,6 +1689,7 @@ img {
   100% { transform: translateX(-50%); }
 }
 
+/* ============ ARTICULOS MERCH ============ */
 #ropa {
   background-image: url(./img/merch-articulos/ropa.jpg);
 }
@@ -2058,11 +1722,9 @@ img {
   background-image: url(./img/merch-articulos/Taza.jpg);
 }
 
-/* =========================
-   PREGUNTAS FRECUENTES (FAQ)
-========================= */
+/* ============ FAQ ============ */
 .faq {
-  padding: 4rem 2rem;
+  padding: 2rem;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -2165,6 +1827,7 @@ img {
   100% { opacity: 1; transform: scale(1); }
 }
 
+/* ============ COUNTDOWN ============ */
 .countdown-wrapper {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
@@ -2188,7 +1851,7 @@ img {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 3rem auto; /* Espacio arriba y abajo, y centrado horizontal */
+  margin: 0 0 3rem 0; /* Espacio arriba y abajo, y centrado horizontal */
   padding: 0 1rem;
 }
 
@@ -2248,8 +1911,9 @@ img {
 
 .social-link:hover {
   background-color: #2c3245; /* Color al pasar el mouse */
-  }
+}
 
+/* ============ PRECIO ============ */
 .precio {
   text-align: left;
 }
@@ -2258,6 +1922,7 @@ img {
   flex-direction: row;
 }
 
+/* ============ SPONSORS ============ */
 .sponsors-ticker-container__organizador {
   justify-content: center;
   display: flex;
@@ -2284,4 +1949,150 @@ img {
   margin: 0 auto;
   text-align: center;
   background-color: var(--bg-alt);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (min-width: 900px) {
+  .social-posts__item {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .organization__grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .agenda__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__grid,
+  .place__grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .about-que-es__grid{
+    grid-template-columns: none;
+    gap: 0;
+  }
+
+  .place-lugar__grid{
+    grid-template-columns: none;
+    gap: 10px;
+  }
+
+  .speakers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .past-event {
+    flex: 0 0 75%;
+  }
+
+  .social-posts__grid{
+    grid-template-columns: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 100px;
+    padding-left: 20px; /* Margen un poco más chico para celulares */
+    justify-content: flex-start; /* Mantiene todo a la izquierda en celular */
+  }
+  
+  .hero__inner {
+    text-align: left; /* Mantiene el texto a la izquierda en celular */
+  }
+
+  .countdown {
+    justify-content: flex-start;
+  }
+
+  .hero__bg-png {
+    opacity: 0.4; /* Imagen un poco más transparente en el teléfono para leer bien */
+  }
+
+  .facebook-video {
+    max-width: 267px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-alt);
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 6vw 30px;
+    gap: 18px;
+    transform: translateY(-120%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav__links.is-open {
+    transform: translateY(0);
+    top: 97px;
+  }
+
+  .nav__cta {
+    align-self: flex-start;
+  }
+
+  .countdown {
+    gap: 14px;
+  }
+
+  .countdown__item span {
+    font-size: 1.3rem;
+  }
+
+  .past-events {
+    padding: 80px 6vw;
+  }
+
+  .past-events__carousel {
+    gap: 8px;
+  }
+
+  .past-events__button {
+    display: none;
+  }
+
+  .past-event {
+    flex: 0 0 88%;
+    height: 320px;
+  }
+
+  .past-event__content {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+  .organization {
+    padding: 80px 6vw;
+  }
+
+  .organization__grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .organizer-card__image {
+    height: 320px;
+  }
 }
