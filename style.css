@@ -61,9 +61,14 @@ img {
 /* ============ STARFIELD ============ */
 #starfield {
   position: fixed;
+  top: 0;
+  left: 0;
   inset: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -2;
   background: radial-gradient(ellipse at 50% -10%, #101a33 0%, var(--bg) 55%);
+  background-color: #03040b;
 }
 
 .progress-line {
@@ -77,7 +82,7 @@ img {
   transition: width 0.1s linear;
 }
 
-/* ============ CARDS DE AGENDA CON IMAGEN ============ */
+/* ============ DAY CARDS ============ */
 .day-card {
   position: relative;
   min-height: 30px;
@@ -267,8 +272,7 @@ img {
   transition: color 0.2s ease;
 }
 
-.nav__link:hover,
-.nav__link.is-active {
+.nav__link:hover, .nav__link.is-active {
   color: var(--text);
 }
 
@@ -356,13 +360,66 @@ img {
 
 /* ============ HERO ============ */
 .hero {
-  position: relative;
+  position: relative; 
   min-height: 100vh;
   display: flex;
-  align-items: center;
   padding: 5vw 5vw;
-  overflow: hidden;
+  align-items: center;
   padding-top: 5rem !important;
+  overflow: hidden; 
+  background: transparent; 
+  text-align: center;
+}
+
+.hero__otros {
+  position: relative; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden; 
+  background: transparent; 
+  text-align: center;
+}
+
+.hero__bg-png {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantiene la imagen ocupando todo sin deformarse */
+  z-index: -1; 
+  opacity: 0.9; 
+  pointer-events: none; 
+}
+
+.hero-inicio::after {
+  content: "";
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  z-index: 0;
+  background: linear-gradient(to bottom, transparent 0%, #03040b 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
+  pointer-events: none;
+}
+
+.hero-inicio::before {
+  content: "";
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero__inner {
@@ -374,7 +431,10 @@ img {
   margin: 0 auto;
   margin-top: 0; 
   padding-top: 0;
-  max-width: 800px; /* Evita que el texto se estire demasiado en pantallas grandes */
+  position: relative;
+  z-index: 1; 
+  width: 100%;
+  max-width: 600px;
 }
 
 .hero__inner__otros {
@@ -387,6 +447,31 @@ img {
   padding-top: 0;
   max-width: 800px; /* Evita que el texto se estire demasiado en pantallas grandes */
   padding: 0 1.5rem; /* Margen de seguridad para celulares */
+}
+
+.hero__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 86, 2, 0.1);
+  border: 1px solid rgba(255, 136, 1, 0.644);
+  color: #caa554; 
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #caa554;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #caa554;
+  animation: pulse 1.5s infinite;
 }
 
 .eyebrow {
@@ -438,6 +523,7 @@ img {
   gap: 22px;
   margin-bottom: 36px;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .countdown__item {
@@ -460,6 +546,21 @@ img {
   letter-spacing: 0.08em;
 }
 
+.countdown-wrapper {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.countdown-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
 .hero__horizon {
   position: absolute;
   left: 0;
@@ -471,25 +572,19 @@ img {
 }
 
 /* ============ MISSION, MISSION INTRO Y MISSION LUGAR ============ */
-.mission,
-.mission-intro,
-.mission-lugar {
+.mission, .mission-intro, .mission-lugar {
   padding: 90px 6vw;
   background: var(--bg-alt);
 }
 
-.mission__grid,
-.mission-intro__grid,
-.mission-lugar__grid {
+.mission__grid, .mission-intro__grid, .mission-lugar__grid {
   max-width: var(--container);
   margin: 0 auto;
   display: grid;
   gap: 26px;
 }
 
-.mission__line,
-.mission-intro__line,
-.mission-lugar__line {
+.mission__line, .mission-intro__line, .mission-lugar__line {
   font-family: var(--font-display);
   font-size: clamp(1.2rem, 2.6vw, 1.7rem);
   font-weight: 500;
@@ -500,8 +595,7 @@ img {
   margin: 0;
 }
 
-.mission__num,
-.mission-intro__num {
+.mission__num, .mission-intro__num {
   font-family: var(--font-mono);
   color: var(--gold);
   font-size: 1.5rem;
@@ -648,8 +742,7 @@ img {
 }
 
 /* ============ ABOUT, ABOUT ADDRESS ============ */
-.about,
-.about-address {
+.about, .about-address {
   padding: 110px 6vw;
   background: var(--bg-alt);
 }
@@ -658,9 +751,7 @@ img {
   padding: 110px 6vw;
 }
 
-.about__grid,
-.about-address__grid,
-.about-que-es__grid {
+.about__grid, .about-address__grid, .about-que-es__grid {
   max-width: var(--container);
   margin: 0 auto;
   display: grid;
@@ -669,16 +760,12 @@ img {
   align-items: start;
 }
 
-.about__text,
-.about-address__text,
-.about-que-es__text {
+.about__text, .about-address__text, .about-que-es__text {
   color: var(--muted);
   margin-bottom: 16px;
 }
 
-.about__badges,
-.about-address__badges,
-.about-que-es__badges {
+.about__badges, .about-address__badges, .about-que-es__badges {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -697,11 +784,7 @@ img {
 }
 
 .agencia-pais:hover {
-    border-color: var(--color);
-}
-
-.agencia-pais:hover a {
-    color: var(--color);
+  border-color: var(--color);
 }
 
 /* ============ BADGE ============ */
@@ -798,12 +881,18 @@ img {
   padding: 110px 6vw;
   max-width: var(--container);
   margin: 0 auto;
+  align-items: center;
 }
 
 .speakers__note {
   color: var(--muted);
   margin-top: 40px;
   text-align: center;
+}
+
+.speakers .section-eyebrow, .speakers .section-title{
+  text-align: center;
+  max-width: none;
 }
 
 .speakers__note a{
@@ -815,9 +904,15 @@ img {
 }
 
 .speakers__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
+}
+
+.speakers__grid .speaker-card {
+  flex: 0 0 calc(25% - 1.5rem); 
+  max-width: calc(25% - 1.5rem);
 }
 
 .speaker-card {
@@ -849,13 +944,35 @@ img {
   margin: 0;
 }
 
+.speaker-card__socials {
+  margin-top: 15px; /* Separación del texto */
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #1a1e29;
+  color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-link:hover {
+  background-color: #2c3245;
+}
+
 .speaker-card:hover {
   transform: translateY(-4px);
   border-color: var(--gold);
 }
 
 /* ============ HACKATHONS ANTERIORES ============ */
-
 .past-events {
   padding: 110px 6vw;
   background: var(--bg-alt);
@@ -873,9 +990,7 @@ img {
   margin: 0;
 }
 
-
 /* CARRUSEL */
-
 .past-events__carousel {
   max-width: 1250px;
   margin: 0 auto;
@@ -902,9 +1017,7 @@ img {
   display: none;
 }
 
-
 /* TARJETAS */
-
 .past-event {
   position: relative;
 
@@ -944,9 +1057,7 @@ img {
   transform: scale(1.05);
 }
 
-
 /* OVERLAY */
-
 .past-event__overlay {
   position: absolute;
   inset: 0;
@@ -958,9 +1069,7 @@ img {
       rgba(6, 9, 17, 0.95) 100%);
 }
 
-
 /* TEXTO */
-
 .past-event__content {
   position: absolute;
 
@@ -995,9 +1104,7 @@ img {
   color: var(--muted);
 }
 
-
 /* BOTONES */
-
 .past-events__button {
   flex-shrink: 0;
 
@@ -1030,9 +1137,7 @@ img {
   transform: scale(1.05);
 }
 
-
 /* DOTS */
-
 .past-events__dots {
   display: flex;
   justify-content: center;
@@ -1074,8 +1179,7 @@ img {
 }
 
 /* ============ PLACE Y PLACE LUGAR ============ */
-.place,
-.place-lugar {
+.place, .place-lugar {
   padding: 110px 6vw;
 }
 
@@ -1083,8 +1187,7 @@ img {
   background: var(--bg-alt);
 }
 
-.place__grid,
-.place-lugar__grid {
+.place__grid, .place-lugar__grid {
   max-width: var(--container);
   margin: 0 auto;
   display: grid;
@@ -1093,29 +1196,25 @@ img {
   align-items: center;
 }
 
-.place__address,
-.place-lugar__address {
+.place__address, .place-lugar__address {
   font-family: var(--font-mono);
   color: var(--gold-soft);
   font-size: 0.95rem;
   margin: 0 0 18px;
 }
 
-.place__text,
-.place-lugar__text {
+.place__text, .place-lugar__text {
   color: var(--muted);
 }
 
-.place__map,
-.place-lugar__map {
+.place__map, .place-lugar__map {
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
   aspect-ratio: 4/3;
 }
 
-.place__map iframe,
-.place-lugar iframe {
+.place__map iframe, .place-lugar iframe {
   width: 100%;
   height: 100%;
   border: 0;
@@ -1124,7 +1223,7 @@ img {
 /* ============ Day Card Lugar ======= */
 .day-card-lugar {
   background: var(--bg-alt);
-  border: 2px solid var(--bg-card);
+  border: 2px solid var(--bg-alt);
   border-radius: 16px;
   padding: 28px;
   transition: transform 0.2s ease, border-color 0.2s ease;
@@ -1162,8 +1261,7 @@ img {
   margin: 0 auto;
 }
 
-.final-cta .section-title,
-.final-cta .section-eyebrow {
+.final-cta .section-title, .final-cta .section-eyebrow {
   margin-left: auto;
   margin-right: auto;
 }
@@ -1181,8 +1279,7 @@ img {
   margin: 0 auto;
 }
 
-.final-cta-org .section-title,
-.final-cta-org .section-eyebrow {
+.final-cta-org .section-title, .final-cta-org .section-eyebrow {
   margin-left: auto;
   margin-right: auto;
 }
@@ -1219,21 +1316,16 @@ img {
   transform: translateY(0);
 }
 
-/* =====================================================
-   ORGANIZACIÓN
-===================================================== */
-
+/* =========== ORGANIZACIÓN =========== */
 .organization {
   padding: 110px 6vw;
   background: var(--bg-alt);
 }
 
-
 .organization__header {
   max-width: var(--container);
   margin: 0 auto 55px;
 }
-
 
 .organization__intro {
   max-width: 650px;
@@ -1245,11 +1337,7 @@ img {
   line-height: 1.7;
 }
 
-
-/* =====================================================
-   GRID
-===================================================== */
-
+/* ========== GRID ========== */
 .organization__grid {
   max-width: var(--container);
   margin: 0 auto;
@@ -1262,11 +1350,7 @@ img {
   gap: 20px;
 }
 
-
-/* =====================================================
-   TARJETA
-===================================================== */
-
+/* ========== TARJETA ========== */
 .organizer-card {
   position: relative;
 
@@ -1294,11 +1378,7 @@ img {
     0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
-
-/* =====================================================
-   IMAGEN
-===================================================== */
-
+/* ========= IMAGEN ============ */
 .organizer-card__image {
   position: relative;
 
@@ -1311,7 +1391,6 @@ img {
       rgba(247, 201, 72, 0.12),
       rgba(45, 212, 191, 0.08));
 }
-
 
 .organizer-card__image img {
   width: 100%;
@@ -1326,16 +1405,11 @@ img {
     opacity 0.3s ease;
 }
 
-
 .organizer-card:hover .organizer-card__image img {
   transform: scale(1.05);
 }
 
-
-/* =====================================================
-   NÚMERO
-===================================================== */
-
+/* ============== NÚMERO ============= */
 .organizer-card__number {
   position: absolute;
 
@@ -1363,15 +1437,10 @@ img {
   font-size: 0.72rem;
 }
 
-
-/* =====================================================
-   CONTENIDO
-===================================================== */
-
+/* ========== CONTENIDO ========== */
 .organizer-card__content {
   padding: 24px;
 }
-
 
 .organizer-card__role {
   display: block;
@@ -1389,7 +1458,6 @@ img {
   text-transform: uppercase;
 }
 
-
 .organizer-card__content h3 {
   margin: 0 0 12px;
 
@@ -1399,7 +1467,6 @@ img {
 
   line-height: 1.2;
 }
-
 
 .organizer-card__content p {
   margin: 0;
@@ -1411,11 +1478,7 @@ img {
   line-height: 1.65;
 }
 
-
-/* =====================================================
-   HERO ORGANIZACIÓN
-===================================================== */
-
+/* ============ HERO ORGANIZACIÓN ========== */
 .organization-hero {
   min-height: 78vh;
 }
@@ -1454,131 +1517,16 @@ img {
   border-radius: 70%;
 }
 
-/* ============ STARFIELD ============ */
-.starfield {
-    position: fixed; /* Lo mantiene fijo aunque el usuario haga scroll */
-    top: 0;
-    left: 0;
-    width: 100vw; /* Ocupa todo el ancho de la pantalla */
-    height: 100vh; /* Ocupa todo el alto de la pantalla */
-    z-index: -1; /* Es clave: lo envía detrás de todos los demás elementos */
-    background-color: #000; /* Color base negro mientras cargan las estrellas */
-}
-/* CAPA 1: Tu canvas ya está configurado (asegúrate de que tenga z-index: -2) */
-#starfield {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -2;
-  background-color: #03040b; /* Color de fondo oscuro */
-}
-
-/* =========================================
-   CONTENEDOR HERO
-========================================= */
-.hero {
-  position: relative; 
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* CAMBIO: Tira todo el bloque hacia la izquierda */
-  overflow: hidden; 
-  background: transparent; 
-  text-align: center;
-}
-
-.hero__otros {
-  position: relative; 
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* CAMBIO: Tira todo el bloque hacia la izquierda */
-  overflow: hidden; 
-  background: transparent; 
-  text-align: center;
-}
-
-/* =========================================
-   CAPA 2: LA IMAGEN PNG (Sigue ocupando todo)
-========================================= */
-.hero__bg-png {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Mantiene la imagen ocupando todo sin deformarse */
-  z-index: -1; 
-  opacity: 0.9; 
-  pointer-events: none; 
-}
-
-/* =========================================
-   CAPA 3: TU CONTENIDO TEXTUAL (A la izquierda)
-========================================= */
-.hero__inner {
-  position: relative;
-  z-index: 1; 
-  width: 100%;
-  max-width: 600px; /* Mantiene el texto agrupado para que no se estire demasiado */
-}
-
-/* Ajuste para la cuenta regresiva */
-.countdown {
-  display: flex;
-  justify-content: flex-start; /* CAMBIO: Alinea los números a la izquierda */
-}
-
-/* Agrega esto en cualquier parte de tu CSS */
-.hero-inicio::after {
-  content: "";
-  position: absolute;
-  text-align: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 40%; /* Controla qué tan arriba llega el difuminado (puedes subirlo al 50% o bajarlo al 20%) */
-  z-index: 0; /* Queda justo por encima de la imagen (-1) y por debajo de tu texto (1) */
-  
-  /* Efecto 1: Degradado que va de transparente al color oscuro de tu fondo */
-  background: linear-gradient(to bottom, transparent 0%, #03040b 100%);
-  
-  /* Efecto 2: El desenfoque real (frosted glass) */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px); /* Soporte para Safari */
-  
-  /* Hace que el desenfoque en sí sea gradual, evitando un corte brusco */
-  mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 100%);
-  
-  pointer-events: none; /* Asegura que no bloquee los clics en la página */
-}
-
-.hero-inicio::before {
-  content: "";
-  position: absolute;
-  
-  text-align: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; /* Cubre todo el hero para un degradado más suave */
-  z-index: 0; /* Por encima de la imagen, por debajo del texto */
-  
-  /* Degradado: Empieza sólido abajo, se hace semitransparente al medio y desaparece arriba
-  background: linear-gradient(to top, #000000 0%, rgba(3, 4, 11, 0.7) 10%, transparent 10%); */
-  pointer-events: none; /* Permite hacer clic a través de esta capa */
-}
-
-/* =========================
-   SOCIAL POSTS / NOVEDADES
-========================= */
-
+/* ========================= SOCIAL POSTS / NOVEDADES ========================= */
 .social-posts {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.social-posts .section-eyebrow, .social-posts .section-title{
+  text-align: center;
+  max-width: none;
 }
 
 .social-posts__grid {
@@ -1615,23 +1563,21 @@ img {
 }
 
 .facebook-video {
-    width: 100%;
-    max-width: 100%;
-    aspect-ratio: 267 / 476;
-    overflow: hidden;
-    border-radius: 8px;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 267 / 476;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .facebook-video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-    display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
-/* =========================
-   PATROCINADORES - CINTA INFINITA
-========================= */
+/* ========================= PATROCINADORES - CINTA INFINITA ========================= */
 .sponsors-ticker {
   padding: 1.5rem 0; 
   background: rgba(217, 221, 223, 0);
@@ -1652,7 +1598,6 @@ img {
   width: 100%;
   overflow: hidden; 
   padding: 1rem 0;
-  /* EFECTO FADE: Hace que los logos se desvanezcan en los bordes izquierdo y derecho */
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -1672,7 +1617,7 @@ img {
   width: auto;
   object-fit: contain;
   flex-shrink: 0; 
-  margin-right: 4rem; /* Separación que no se deforma al hacer zoom */
+  margin-right: 4rem;
   filter: brightness(0) invert(1) opacity(0.6);
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
@@ -1683,7 +1628,6 @@ img {
   transform: scale(1.2);
 }
 
-/* El loop perfecto a la mitad del recorrido */
 @keyframes scrollTicker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -1722,6 +1666,13 @@ img {
   background-image: url(./img/merch-articulos/Taza.jpg);
 }
 
+.merch__card {
+  padding: 110px 6vw;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--bg-alt);
+}
+
 /* ============ FAQ ============ */
 .faq {
   padding: 2rem;
@@ -1758,7 +1709,7 @@ img {
 }
 
 .faq__question:hover {
-  color: var(--gold) /* Puedes cambiarlo al color de acento que uses */
+  color: var(--gold);
 }
 
 .faq__icon {
@@ -1767,7 +1718,6 @@ img {
   transition: transform 0.3s ease;
 }
 
-/* Estado Activo */
 .faq__question[aria-expanded="true"] .faq__icon {
   transform: rotate(45deg);
 }
@@ -1784,41 +1734,13 @@ img {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8); /* Ajusta según el contraste de tu fondo */
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
 .faq__question[aria-expanded="true"] + .faq__answer {
-  max-height: 500px; /* Un valor alto para asegurar que quepa el texto */
+  max-height: 500px;
   opacity: 1;
-}
-
-/* =========================
-   MEJORAS DEL HERO (ESTADO Y CUENTA REGRESIVA)
-========================= */
-.hero__status {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(212, 86, 2, 0.1);
-  border: 1px solid rgba(255, 136, 1, 0.644);
-  color: #caa554; 
-  padding: 6px 16px;
-  border-radius: 50px;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-}
-
-.status-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #caa554;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #caa554;
-  animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
@@ -1827,31 +1749,13 @@ img {
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* ============ COUNTDOWN ============ */
-.countdown-wrapper {
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.countdown-title {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 1rem;
-}
-
-/* =========================
-   CONTACTO DIRECTO EMAIL
-========================= */
+/* ============== CONTACTO DIRECTO EMAIL ============= */
 .contacto-directo {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin: 0 0 3rem 0; /* Espacio arriba y abajo, y centrado horizontal */
+  margin: 0 0 3rem 0;
   padding: 0 1rem;
 }
 
@@ -1866,51 +1770,28 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.05); /* Fondo semitransparente sutil */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde suave */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 12px 24px;
-  border-radius: 50px; /* Esto hace la forma de píldora/elipse */
+  border-radius: 50px;
   color: #fff;
-  font-family: 'IBM Plex Mono', monospace; /* Letra estilo código para mails queda genial */
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-/* Efecto hover cuando pasas el mouse */
 .contacto-directo__email:hover {
-  background: rgba(255, 205, 0, 0.1); /* Fondo amarillo muy sutil */
-  border-color: #caa554; /* Borde del color de tu acento (ajustalo si usás otro) */
+  background: rgba(255, 205, 0, 0.1);
+  border-color: #caa554;
   color: #caa554;
-  transform: translateY(-2px); /* Pequeño salto hacia arriba */
+  transform: translateY(-2px);
 }
 
 .email-icon {
   font-size: 1.2rem;
   opacity: 0.8;
-}
-.speaker-card__socials {
-  margin-top: 15px; /* Separación del texto */
-  display: flex;
-  justify-content: center;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background-color: #1a1e29; /* Color de fondo del círculo */
-  color: #ffffff; /* Color del ícono de LinkedIn */
-  border-radius: 50%;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.social-link:hover {
-  background-color: #2c3245; /* Color al pasar el mouse */
 }
 
 /* ============ PRECIO ============ */
@@ -1933,7 +1814,7 @@ img {
   width: auto;
   object-fit: contain;
   flex-shrink: 0; 
-  margin: 0 auto; /* Separación que no se deforma al hacer zoom */
+  margin: 0 auto;
   filter: brightness(0) invert(1) opacity(0.6);
   transition: filter 0.3s ease, transform 0.3s ease;
   cursor: pointer;
@@ -1944,17 +1825,17 @@ img {
   transform: scale(1.2);
 }
 
-.merch__card {
-  padding: 110px 6vw;
-  margin: 0 auto;
-  text-align: center;
-  background-color: var(--bg-alt);
-}
-
 /* ============ RESPONSIVE ============ */
 @media (min-width: 900px) {
   .social-posts__item {
     max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .speakers__grid .speaker-card {
+    flex: 0 0 calc(50% - 1rem); 
+    max-width: calc(50% - 1rem);
   }
 }
 
@@ -1970,8 +1851,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .about__grid,
-  .place__grid {
+  .about__grid, .place__grid {
     grid-template-columns: 1fr;
     gap: 10px;
   }
@@ -2002,12 +1882,12 @@ img {
 @media (max-width: 768px) {
   .hero {
     padding-top: 100px;
-    padding-left: 20px; /* Margen un poco más chico para celulares */
-    justify-content: flex-start; /* Mantiene todo a la izquierda en celular */
+    padding-left: 20px;
+    justify-content: flex-start;
   }
   
   .hero__inner {
-    text-align: left; /* Mantiene el texto a la izquierda en celular */
+    text-align: left;
   }
 
   .countdown {
@@ -2015,7 +1895,7 @@ img {
   }
 
   .hero__bg-png {
-    opacity: 0.4; /* Imagen un poco más transparente en el teléfono para leer bien */
+    opacity: 0.4;
   }
 
   .facebook-video {
@@ -2094,5 +1974,12 @@ img {
 
   .organizer-card__image {
     height: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .speakers__grid .speaker-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
