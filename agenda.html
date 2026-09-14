@@ -36,7 +36,6 @@
 </script>
 
 <body>
-
   <!-- CAMPO DE ESTRELLAS -->
   <canvas id="starfield"></canvas>
 
@@ -46,126 +45,69 @@
   <!-- =========================
        NAVBAR
   ========================== -->
-   <header
-    class="nav"
-    id="nav"
-  >
-
-    <a
-      href="index.html"
-      class="nav__brand"
-    >
-
-      
+   <header class="nav" id="nav">
+    <a href="index.html" class="nav__brand">
       <img src="img/logo/logo.png" alt="Logo" class="logo">
-
       <span class="nav__brand-muted">
         · Santa&nbsp;Rosa de Calamuchita
       </span>
-
     </a>
-
-
-    <button
-      class="nav__toggle"
-      id="navToggle"
-      aria-label="Abrir menú"
-      aria-expanded="false"
-    >
-
+    <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
-
     </button>
-
-
-    <nav
-      class="nav__links"
-      id="navLinks"
-    >
-
+    <nav class="nav__links" id="navLinks">
       <a href="index.html" class="nav__link">
         Inicio
       </a>
-
-
       <a href="agenda.html" class="nav__link">
         Agenda
       </a>
-
-
       <a href="que-es.html" class="nav__link">
         ¿Que es Space App Challenge NASA?
       </a>
-
-
-      <a
-        href="organizacion.html"
-        class="nav__link"
-      >
+      <a href="organizacion.html" class="nav__link">
         Organización
       </a>
-
-
       <a href="lugar.html" class="nav__link">
-      Lugar
-    </a>
-
-    <a href="merch.html" class="nav__link">Merch</a>
-
-
-       <a
+        Lugar
+      </a>
+      <a href="merch.html" class="nav__link">Merch</a>
+      <a
         href=" https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
-        class="nav__cta"
-      >
+        class="nav__cta">
         Confirmar asistencia
       </a>
-
     </nav>
-
   </header>
-
-
-
   <main>
-
-
     <!-- =========================
          CABECERA DE AGENDA
     ========================== -->
     <section class="hero__otros" id="inicio">
-
       <div class="hero__inner__otros">
-
         <p class="eyebrow" data-reveal>
           13 · 14 · 15 de noviembre — 2026
         </p>
-
         <h1 class="hero__title" data-reveal>
           La agenda de la
           <span class="hero__title-accent">
             misión.
           </span>
         </h1>
-
         <p class="hero__sub" data-reveal>
           Tres días para aprender, crear, colaborar y transformar
           datos abiertos de la NASA en soluciones reales.
         </p>
-
         <div class="hero__actions" data-reveal>
-
           <a href="#agenda" class="btn btn--primary">
             Ver agenda ↓
           </a>
-
           <a href="index.html" class="btn btn--ghost">
             Volver al inicio
           </a>
-
         </div>
-
       </div>
     </section>
 
@@ -173,216 +115,152 @@
          INFORMACIÓN
     ========================== -->
     <section class="mission">
-
       <div class="mission__grid">
-
         <p class="mission__line" data-reveal>
           <span class="mission__num">01</span>
           Los horarios y actividades pueden actualizarse a medida que
           se acerque el evento.
         </p>
-
         <p class="mission__line" data-reveal>
           <span class="mission__num">02</span>
           Los nombres de charlas, actividades y oradores se encuentran
           pendientes de confirmación.
         </p>
-
         <p class="mission__line" data-reveal>
           <span class="mission__num">03</span>
           Consultá nuevamente la agenda para conocer las novedades.
         </p>
-
       </div>
-
     </section>
-
 
     <!-- =========================
          AGENDA
     ========================== -->
     <section class="agenda" id="agenda">
-
       <p class="section-eyebrow" data-reveal>
         La trayectoria
       </p>
-
       <h2 class="section-title" data-reveal>
         Tres días, una órbita completa.
       </h2>
-
-
       <!-- ÓRBITA -->
       <div class="orbit" data-reveal>
-
-        <svg
-          viewBox="0 0 1000 140"
-          class="orbit__path"
-          preserveAspectRatio="none"
-          aria-hidden="true"
-        >
-          <path
-            id="orbitCurve"
-            d="M20,110 C 250,10 350,10 500,70 C 650,130 750,130 980,30"
-          />
+        <svg viewBox="0 0 1000 140" class="orbit__path" preserveAspectRatio="none" aria-hidden="true">
+          <path id="orbitCurve" d="M20,110 C 250,10 350,10 500,70 C 650,130 750,130 980,30"/>
         </svg>
-
-        <div
-          class="orbit__sat"
-          id="orbitSat"
-        ></div>
-
+        <div class="orbit__sat" id="orbitSat"></div>
       </div>
-
 
       <!-- =========================
            DÍA 1
       ========================== -->
       <div class="agenda__grid">
-
         <article class="day-card-agenda" data-reveal>
-
-          
-
-            <span class="day-card-agenda__label">
+          <span class="day-card-agenda__label">
             Día 1 - Sábado 14 de Noviembre
           </span>
-
           <ul class="day-card-agenda__list">
-
-            
               <strong>SPACE KIDS (6 a 11 años)</strong>
-            
-
             <li>
               <strong>08:00 — 09:00</strong><br>
               ACREDITACIÓN Y RECEPCIÓN - Registro, acreditación y entrega de materiales
             </li>
-
             <li>
               <strong>09:00 — 09:30</strong><br>
               APERTURA OFICIAL - Bienvenida a cargo de la organización
             </li>
-
             <li>
               <strong>09:30 — 10:00</strong><br>
               DEL PLANETA AL ESPACIO - Charla introducroria sobre la NASA
             </li>
-
             <li>
               <strong>10:00 — 10:30</strong><br>
               MISIÓN ESPACIAL - Presentación del desafio para los más pequeños
             </li>
-
             <li>
               <strong>10:30 — 11:00</strong><br>
               EXPLORANDO LOS DATOS DE LA NASA - Imágenes satelitales, clima, océanos, tierra y espacio
             </li>
-
             <li>
               <strong>11:00 — 11:15</strong><br>
               RECREO
             </li>
-
             <li>
               <strong>11:15 — 12:15</strong><br>
               IMAGINAMOS NUIETRA SOLUCIÓN - Dibujos, maquetas, programación desenchufada y creatividad
             </li>
-
             <li>
               <strong>12:15 — 13:15</strong><br>
               ALMUERZO
             </li>
-
             <li>
               <strong>13:15 — 14:15</strong><br>
               CONSTRUIMOS EL PROTOTIPO - Maquetas, robots, juegos, apps, carteles y más
             </li>
-            
             <li>
               <strong>14:15 — 15:00</strong><br>
             PROBAMOS NUESTRA MISIÓN - Testeo y mejora con ayuda de mentores
             </li>
-
             <li>
               <strong>15:00 — 15:15</strong><br>
               RECREO
             </li>
-
             <li>
               <strong>15:15 — 16:15</strong><br>
               PRESENTACIÓN DE PREYECTOS - Cada equipo presenta su solución en 3 minutos
             </li>
-
             <li>
               <strong>16:15 — 16:45</strong><br>
               RECONOCIMIENTO DE SPACE KIDS - Premiación por categorías
             </li>
-
             <li>
               <strong>15:00 — 15:15</strong><br>
               CIERRE DE SPACE KIDS - Entrega de certificados y foto grupal
             </li>
-
           </ul>
-
-
         </article>
-
 
         <!-- =========================
              DÍA 1 
         ========================== -->
         <article class="day-card-agenda" data-reveal>
-
           <span class="day-card-agenda__label">
             Día 1 - Sábado 14 de Noviembre
           </span>
-
           <ul class="day-card-agenda__list">
-
             <strong>SPACE EXPLORERS (12 a 15 años) - SPACE INNOVATORS (16 a 18 años)</strong>
-
             <li>
               <strong>08:00 — 09:00</strong><br>
               ACREDITACIÓN Y RECEPCIÓN - Registro, acreditación y entrega de materiales
             </li>
-
             <li>
               <strong>09:00 — 09:30</strong><br>
               APERTURA OFICIAL - Bienvenida a cargo de la organización
             </li>
-
             <li>
               <strong>09:30 — 10:00</strong><br>
               DEL PLANETA AL ESPACIO - Charla introducroria sobre la NASA
             </li>
-
             <li>
               <strong>10:00 — 10:30</strong><br>
               PRESENTACIÓN DE LOS DESAFÍOS - Conocimiento y análisis de los desafíos oficiales
             </li>
-
             <li>
               <strong>11:00 — 11:30</strong><br>
               FORMACIÓN DE EQUIPOS E IDEACIÓN - Equipos, selección de desafío, definición del problema y posibles soluciones
             </li>
-
             <li>
               <strong>11:30 — 11:45</strong><br>
               RECREO
             </li>
-
             <li>
               <strong>11:45 — 13:00</strong><br>
               INVESTIGACIÓN Y ANÁLISIS DE DATOS - Exploración de datos abiertos de la NASA, misiones, información científica y tecnológica
             </li>
-
             <li>
               <strong>13:00 — 14:00</strong><br>
               ALMUERZO
             </li>
-
             <li>
               <strong>14:00 — 18:00</strong><br>
               HACKATHON PRIMERA ETAPA - Desarrolo de ideas, programación, diseño, robótica, IA, visualización de datos y más
@@ -392,38 +270,29 @@
             <li>
               DISEÑO DE LA SOLUCIÓN - Definición del problema, pruebas. usuarios, datos, impacto y prototipo
             </li>
-
           </ul>
-
         </article>
-
 
         <!-- =========================
              DÍA 3
         ========================== -->
         <article class="day-card-agenda" data-reveal>
-
           <span class="day-card-agenda__label">
             Día 2 · Domingo 15 de Noviembre
           </span>
-
           <ul class="day-card-agenda__list">
-
             <li>
               <strong>09:00 — 09:30</strong><br>
               APERTURA DEL DÍA 2 - Bienvenida, repaso de objetivos y organización del día
             </li>
-
             <li>
               <strong>09:30 — 12:00</strong><br>
               HACKATHON SEGUNDA ETAPA - Desarrollo intensivo de los proyectos
             </li>
-
             <li>
               <strong>12:00 — 12:30</strong><br>
             MENTORÍAS ESPECIALIZADAS - Estaciones de mentoría: Datos NASA | Programación | IA y tecnología | Diseño | Ciencia | Comunicación
             </li>
-
             <li>
               <strong>12:30 — 13:30</strong><br>
               ALMUERZO
@@ -432,93 +301,66 @@
               <strong>13:30 — 15:00</strong><br>
               DESARROLLO FINAL - Finalización de prototipos, pruebas, diseño y preparación de la presentación
             </li>
-
             <li>
               <strong>15:00 — 15:30</strong><br>
               PRUEBA Y CONTROL FINAL - Verificación de proyectos, datos, descripción, ptesentación y requisitos de entrega
             </li>
-
             <li>
               <strong>15:30 — 17:00</strong><br>
               PRESENTACIONES FINALES - Cada equipo presenta en 5 minutos (3 minutos de presentación + 2 minutos de preguntas)
             </li>
-
             <li>
               <strong>17:00 — 17:30</strong><br>
               EVALUACIÓN DEL JURADO - Evaluación de proyectos según criterios: impacto, creatividad, validez, relevancia y presentación
             </li>
-
             <li>
               <strong>17:30 — 18:00</strong><br>
               PREMIACIÓN Y CIERRE - Entraga de premios, certificados, foto oficial y palabras de cierre
             </li>
-
           </ul>
-
         </article>
-
       </div>
-
     </section>
-
 
     <!-- =========================
          CTA
     ========================== -->
     <section class="final-cta">
-
       <p class="section-eyebrow" data-reveal>
         Última llamada
       </p>
-
       <h2 class="section-title" data-reveal>
         ¿Vas a ser parte de la misión?
       </h2>
-
       <p class="hero__sub" data-reveal>
         Confirmá tu lugar y sumate a la tripulación.
       </p>
-
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLScfEqpRoke6JbXq1Mukbgra3Xgw4x82jFN2dRppEd2FNQ0bPw/viewform"
-        class="btn btn--primary btn--lg"
-        data-reveal
-      >
+        class="btn btn--primary btn--lg" data-reveal>
         Confirmar asistencia
       </a>
-
     </section>
-
   </main>
-
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
- <footer class="footer">
-
-  <p>
-    NASA Space Apps Challenge ·
-    Santa Rosa de Calamuchita,
-    Córdoba, Argentina
-  </p>
-
-  <p class="footer__muted">
-    Sitio no oficial de la comunidad local del evento.
-  </p>
-
- <p class="footer__credit">
+  <!-- ========================= FOOTER ========================== -->
+  <footer class="footer">
+    <p>
+      NASA Space Apps Challenge ·
+      Santa Rosa de Calamuchita,
+      Córdoba, Argentina
+    </p>
+    <p class="footer__muted">
+      Sitio no oficial de la comunidad local del evento.
+    </p>
+    <p class="footer__credit">
       Diseñado y desarrollado por
       <a href="https://www.linkedin.com/in/nikochittoo" target="_blank">@nikochittoo</a>
       &
       <a href="https://www.linkedin.com/in/valentin-salda%C3%B1o-aab18125a/" target="_blank">@valen</a>
     </p>
-
-</footer>
-
+  </footer>
 
   <!-- JS PRINCIPAL -->
   <script src="script.js"></script>
-
 </body>
 </html>
