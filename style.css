@@ -1983,3 +1983,15 @@ img {
     max-width: 100%;
   }
 }
+
+/* Imagen por defecto para escritorio */
+.hero__bg-png {
+  content: url('img/hero-index-background/Fondo mega ultra.png');
+}
+
+/* Imagen específica para pantallas móviles (ej. menor a 768px) */
+@media (max-width: 768px) {
+  .hero__bg-png {
+    content: url('img/hero-index-background/Fondo mega ultra mobile.png'); /* Reemplaza con la ruta de tu imagen mobile */
+  }
+}
