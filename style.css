@@ -231,13 +231,6 @@ img {
   font-size: 1.05rem;
 }
 
-.nav__brand {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  /* text-decoration: none; */
-}
-
 .logo {
   height: 60px;
   width: auto;
@@ -270,6 +263,10 @@ img {
   font-weight: 500;
   position: relative;
   transition: color 0.2s ease;
+}
+
+.texto-chico{
+  display: none;
 }
 
 .nav__link:hover, .nav__link.is-active {
@@ -382,6 +379,7 @@ img {
 }
 
 .hero__bg-png {
+  content: url('img/hero-index-background/Fondo mega ultra.png');
   position: absolute;
   top: 0;
   left: 0;
@@ -390,7 +388,7 @@ img {
   object-fit: cover; /* Mantiene la imagen ocupando todo sin deformarse */
   z-index: -1; 
   opacity: 0.9; 
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 .hero-inicio::after {
@@ -1844,6 +1842,14 @@ img {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
+
+  .texto-normal{
+    display: none;
+  }
+
+  .texto-chico{
+    display: flex;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1932,6 +1938,14 @@ img {
     align-self: flex-start;
   }
 
+  .texto-chico {
+    display: none;
+  }
+
+  .texto-normal {
+    display: flex;
+  }
+
   .countdown {
     gap: 14px;
   }
@@ -1984,12 +1998,6 @@ img {
   }
 }
 
-/* Imagen por defecto para escritorio */
-.hero__bg-png {
-  content: url('img/hero-index-background/Fondo mega ultra.png');
-}
-
-/* Imagen específica para pantallas móviles (ej. menor a 768px) */
 @media (max-width: 768px) {
   .hero__bg-png {
     content: url('img/hero-index-background/Fondo mega ultra mobile.png'); /* Reemplaza con la ruta de tu imagen mobile */
