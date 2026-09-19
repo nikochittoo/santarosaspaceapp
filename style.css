@@ -1624,22 +1624,6 @@ img {
   transform: scale(1.2);
 }
 
-.sponsors-ticker__track img {
-  height: 35px; 
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0; 
-  margin-right: 4rem;
-  filter: brightness(0) invert(1) opacity(0.6);
-  transition: filter 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-}
-
-.sponsors-ticker__track img:hover {
-  filter: brightness(0) invert(1) opacity(1);
-  transform: scale(1.2);
-}
-
 @keyframes scrollTicker {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
