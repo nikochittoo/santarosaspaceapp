@@ -313,3 +313,32 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("legacyTrack");
+  const btnPrev = document.getElementById("legacyPrev");
+  const btnNext = document.getElementById("legacyNext");
+
+  if (track && btnPrev && btnNext) {
+    // Distancia de desplazamiento según el ancho de una tarjeta + el gap
+    const getScrollAmount = () => {
+      const card = track.querySelector(".legacy-card");
+      if (!card) return 350;
+      return card.offsetWidth + 24; // 24px corresponde al gap (1.5rem)
+    };
+
+    btnPrev.addEventListener("click", () => {
+      track.scrollBy({
+        left: -getScrollAmount(),
+        behavior: "smooth"
+      });
+    });
+
+    btnNext.addEventListener("click", () => {
+      track.scrollBy({
+        left: getScrollAmount(),
+        behavior: "smooth"
+      });
+    });
+  }
+});
