@@ -1135,7 +1135,7 @@ img {
 }
 
 /* PAST EVENTS AND LEGACY CAROUSEL DOTS */
-.past-events__dots, .legacy-carousel__dots {
+.past-events__dots {
   display: flex;
   justify-content: center;
 
@@ -1144,7 +1144,16 @@ img {
   margin-top: 24px;
 }
 
-.past-events__dots button, .legacy-carousel__dots button {
+.legacy-carousel__dots {
+  display: flex;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 24px;
+}
+
+.past-events__dots button {
   width: 7px;
   height: 7px;
 
@@ -1165,7 +1174,38 @@ img {
     background 0.2s ease;
 }
 
-.past-events__dots button.is-active, .legacy-carousel__dots button.is-active {
+.legacy-carousel__dots button {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 50%;
+
+  background: var(--muted);
+
+  opacity: 0.35;
+
+  cursor: pointer;
+
+  transition:
+    width 0.2s ease,
+    opacity 0.2s ease,
+    background 0.2s ease;
+}
+
+.past-events__dots button.is-active {
+  width: 22px;
+
+  border-radius: 999px;
+
+  background: var(--gold);
+
+  opacity: 1;
+}
+
+.legacy-carousel__dots button.is-active {
   width: 22px;
 
   border-radius: 999px;
