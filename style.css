@@ -1135,7 +1135,7 @@ img {
 }
 
 /* DOTS */
-.past-events__dots {
+.past-events__dots, .legacy-carousel__dots {
   display: flex;
   justify-content: center;
 
@@ -1144,7 +1144,7 @@ img {
   margin-top: 24px;
 }
 
-.past-events__dots button {
+.past-events__dots button, .legacy-carousel__dots button {
   width: 7px;
   height: 7px;
 
@@ -1165,7 +1165,7 @@ img {
     background 0.2s ease;
 }
 
-.past-events__dots button.is-active {
+.past-events__dots button.is-active, .legacy-carousel__dots button.is-active {
   width: 22px;
 
   border-radius: 999px;
@@ -1827,6 +1827,8 @@ img {
   overflow: hidden;
   text-align: center;
   align-items: center;
+  justify-items: center;
+  justify-content: center;
 }
 
 .legacy-section__header {
@@ -1897,7 +1899,7 @@ img {
    ========================================== */
 
 .legacy-card {
-  background: #121212;
+  background: var(--bg-alt);
   z-index: 2;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
@@ -2131,6 +2133,10 @@ img {
   .past-event {
     flex: 0 0 88%;
     height: 320px;
+  }
+
+  .legacy-carousel {
+    max-width: 360px;
   }
 
   .past-event__content {

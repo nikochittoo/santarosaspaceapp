@@ -279,6 +279,127 @@ if (pastTrack && pastPrev && pastNext) {
 
 }
 
+// ============ CARRUSEL · HACKATHONS ANTERIORES ============
+// Todo modificado
+
+const pastProyectoTrack = document.getElementById('legacyTrack');
+const pastProyectoPrev = document.getElementById('legacyPrev');
+const pastProyectoNext = document.getElementById('legacyNext');
+const pastLegacyDots = document.querySelectorAll('#legacyDots button');
+
+if (pastProyectoTrack && pastProyectoPrev && pastProyectoNext) {
+
+  function getCardWidth() {
+    const card = pastProyectoTrack.querySelector('.past-event');
+
+    if (!card) return 0;
+
+    const gap = 20;
+
+    return card.offsetWidth + gap;
+  }
+
+  function getMaxScroll() {
+    return pastProyectoTrack.scrollWidth - pastProyectoTrack.clientWidth;
+  }
+
+  function getCurrentDotIndex() {
+    const maxScroll = getMaxScroll();
+
+    if (maxScroll <= 0 || pastLegacyDots.length <= 1) {
+      return 0;
+    }
+
+    const position = pastProyectoTrack.scrollLeft;
+
+    return Math.round(
+      (position / maxScroll) * (pastLegacyDots.length - 1)
+    );
+  }
+
+
+  function scrollToDot(index) {
+    const maxScroll = getMaxScroll();
+
+    if (pastLegacyDots.length <= 1) {
+      pastProyectoTrack.scrollTo({
+        left: 0,
+        behavior: 'smooth'
+      });
+      return;
+    }
+
+    const position =
+      (maxScroll / (pastLegacyDots.length - 1)) * index;
+
+    pastProyectoTrack.scrollTo({
+      left: position,
+      behavior: 'smooth'
+    });
+  }
+
+
+  pastProyectoNext.addEventListener('click', () => {
+
+    const currentIndex = getCurrentDotIndex();
+
+    const nextIndex = Math.min(
+      currentIndex + 1,
+      pastLegacyDots.length - 1
+    );
+
+    scrollToDot(nextIndex);
+
+  });
+
+
+  pastProyectoPrev.addEventListener('click', () => {
+
+    const currentIndex = getCurrentDotIndex();
+
+    const prevIndex = Math.max(
+      currentIndex - 1,
+      0
+    );
+
+    scrollToDot(prevIndex);
+
+  });
+
+
+
+  pastLegacyDots.forEach((dot, index) => {
+
+    dot.addEventListener('click', () => {
+      scrollToDot(index);
+    });
+
+  });
+
+
+  pastProyectoTrack.addEventListener('scroll', () => {
+
+    const maxScroll = getMaxScroll();
+
+    if (maxScroll <= 0) return;
+
+    const position = pastProyectoTrack.scrollLeft;
+
+    const index = Math.round(
+      (position / maxScroll) * (pastLegacyDots.length - 1)
+    );
+
+    pastLegacyDots.forEach((dot, i) => {
+      dot.classList.toggle(
+        'is-active',
+        i === index
+      );
+    });
+
+  });
+
+}
+
 // ============ NAV: PÁGINA ACTIVA ============
 const currentPage =
   window.location.pathname.split('/').pop() || 'index.html';
