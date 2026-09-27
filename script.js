@@ -463,3 +463,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+function toggleAccordion(id, btn) {
+      const targetBox = document.getElementById(id);
+      if (!targetBox) return;
+
+      targetBox.classList.toggle('open');
+      btn.classList.toggle('active');
+
+      const textSpan = btn.querySelector('.btn-text');
+      if (targetBox.classList.contains('open')) {
+        textSpan.textContent = 'Ver menos';
+      } else {
+        textSpan.textContent = 'Ver más';
+      }
+    }

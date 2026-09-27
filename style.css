@@ -700,43 +700,151 @@ img {
 }
 
 .agenda__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  text-align: left;
-}
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      text-align: left;
+      max-width: 1400px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
 
-.day-card-agenda {
-  background: var(--bg-card);
-  border: 2px solid var(--bg-card);
-  border-radius: 16px;
-  padding: 28px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
+    .day-card-agenda {
+      background: var(--bg-card);
+      border: 2px solid var(--bg-card);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
 
-.day-card-agenda:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold);
-}
+    .day-card-agenda:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+    }
 
-.day-card-agenda__label {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: var(--gold-soft);
-  margin-bottom: 16px;
-  font-size: 1.05rem;
-}
+    .day-card-agenda__label {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 600;
+      color: var(--gold-soft);
+      margin-bottom: 20px;
+      font-size: 1.15rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
+    }
 
-.day-card-agenda__list {
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
+    .day-card-agenda__subgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      flex-grow: 1;
+    }
 
-.day-card-agenda__list li {
-  margin-bottom: 8px;
-}
+    .agenda-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .agenda-column:not(:last-child) {
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding-right: 20px;
+    }
+
+    .agenda-category-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      color: var(--gold-soft);
+      text-align: center;
+    }
+
+    .day-card-agenda__list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+      list-style-type: disc;
+    }
+
+    .day-card-agenda__list li {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    .day-card-agenda__list strong {
+      color: #ffffff;
+    }
+
+    /* Accordion Custom Logic Styles */
+    .agenda-collapse-box {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.3s ease-out;
+    }
+
+    .agenda-collapse-box.open {
+      grid-template-rows: 1fr;
+    }
+
+    .agenda-collapse-inner {
+      overflow: hidden;
+    }
+
+    .agenda-toggle-btn {
+      background: transparent;
+      border: none;
+      color: var(--gold-soft);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      cursor: pointer;
+      margin-top: 15px;
+      padding: 6px 0;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      width: fit-content;
+      transition: color 0.2s ease;
+    }
+
+    .agenda-toggle-btn:hover {
+      color: var(--gold);
+    }
+
+    .agenda-toggle-btn .arrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      transition: transform 0.3s ease;
+    }
+
+    .agenda-toggle-btn.active .arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .agenda__grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .day-card-agenda__subgrid {
+        grid-template-columns: 1fr;
+      }
+      .agenda-column:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-right: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+    }
 
 /* ============ ABOUT, ABOUT ADDRESS ============ */
 .about, .about-address {
