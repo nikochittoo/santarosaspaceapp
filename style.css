@@ -699,7 +699,7 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.agenda__grid, .agenda__grid-index {
+.agenda__grid, .agenda__grid-index, .agenda__grid-que-es, .agenda__grid-merch, .agenda__grid-lugar {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 24px;
@@ -709,8 +709,12 @@ img {
   align-items: start;
 }
 
-.agenda__grid-index {
+.agenda__grid-index, .agenda__grid-que-es, .agenda__grid-merch, .agenda__grid-lugar {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.agenda__grid-lugar {
+  align-items: stretch;
 }
 
 .day-card-agenda {
