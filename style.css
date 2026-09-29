@@ -355,6 +355,11 @@ img {
   font-size: 1.05rem;
 }
 
+#btn-discord:hover {
+  color: #6f64b1;
+  border-color: #6f64b1;
+}
+
 /* ============ HERO ============ */
 .hero {
   position: relative; 
