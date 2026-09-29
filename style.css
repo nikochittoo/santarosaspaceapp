@@ -320,8 +320,9 @@ img {
 
 /* ============ BUTTONS ============ */
 .btn {
-  display: inline-block;
+  display: inline-flex;
   text-decoration: none;
+  align-items: center;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 0.95rem;
@@ -353,6 +354,14 @@ img {
 .btn--lg {
   padding: 16px 34px;
   font-size: 1.05rem;
+}
+
+.discord-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    margin-left: 8px;
+    flex-shrink: 0;
 }
 
 #btn-discord:hover {
