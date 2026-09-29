@@ -1016,6 +1016,11 @@ img {
   text-align: center;
 }
 
+.speakers__note_news {
+  color: var(--muted);
+  margin-top: 40px;
+}
+
 .speakers .section-eyebrow, .speakers .section-title{
   text-align: center;
   max-width: none;
@@ -1026,6 +1031,14 @@ img {
 }
 
 .speakers__note a:hover{
+  color: var(--gold);
+}
+
+.speakers__note_news a{
+  text-decoration: none;
+}
+
+.speakers__note_news a:hover{
   color: var(--gold);
 }
 
