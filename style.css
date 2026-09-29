@@ -1699,8 +1699,9 @@ img {
 /* ========================= SOCIAL POSTS / NOVEDADES ========================= */
 .social-posts {
   padding: 4rem 2rem;
-  max-width: 1200px;
+  align-items: center;
   margin: 0 auto;
+  background-color: var(--bg-alt);
 }
 
 .social-posts .section-eyebrow, .social-posts .section-title {
@@ -1714,12 +1715,15 @@ img {
   overflow: hidden;
   margin-top: 3rem;
   padding-bottom: 1rem;
+  align-items: center;
+  justify-items: center;
 }
 
 /* Transformamos la grilla en un carrusel horizontal deslizable */
 .social-posts__grid {
   display: flex;
   gap: 2rem;
+  max-width: 1140px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
