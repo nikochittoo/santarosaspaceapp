@@ -478,3 +478,62 @@ function toggleAccordion(id, btn) {
         textSpan.textContent = 'Ver más';
       }
     }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.getElementById("challengesTrack");
+  const prevBtn = document.getElementById("challengesPrev");
+  const nextBtn = document.getElementById("challengesNext");
+  const dotsContainer = document.getElementById("challengesDots");
+  
+  if (!track) return;
+
+  const cards = track.querySelectorAll(".challenge-card");
+  const dots = dotsContainer.querySelectorAll("button");
+
+  // Función para obtener el ancho de desplazamiento de una tarjeta + el gap
+  const getScrollAmount = () => {
+    if (cards.length > 0) {
+      const cardStyle = window.getComputedStyle(cards[0]);
+      const cardWidth = cards[0].offsetWidth;
+      const gap = parseInt(window.getComputedStyle(track).gap) || 32;
+      return cardWidth + gap;
+    }
+    return 300;
+  };
+
+  // Botón Siguiente
+  nextBtn?.addEventListener("click", () => {
+    track.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+  });
+
+  // Botón Anterior
+  prevBtn?.addEventListener("click", () => {
+    track.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+  });
+
+  // Sincronizar dots al hacer scroll o clic
+  track.addEventListener("scroll", () => {
+    const scrollPosition = track.scrollLeft;
+    const cardWidth = getScrollAmount();
+    const activeIndex = Math.round(scrollPosition / cardWidth);
+
+    dots.forEach((dot, index) => {
+      if (index === activeIndex) {
+        dot.classList.add("is-active");
+      } else {
+        dot.classList.remove("is-active");
+      }
+    });
+  });
+
+  // Clic en los dots para moverse
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      const cardWidth = getScrollAmount();
+      track.scrollTo({
+        left: cardWidth * index,
+        behavior: "smooth"
+      });
+    });
+  });
+});
