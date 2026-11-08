@@ -713,7 +713,7 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.agenda__grid, .agenda__grid-index, .agenda__grid-que-es, .agenda__grid-merch, .agenda__grid-lugar {
+.agenda__grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   gap: 24px;
@@ -724,7 +724,13 @@ img {
 }
 
 .agenda__grid-index, .agenda__grid-que-es, .agenda__grid-merch, .agenda__grid-lugar {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  text-align: left;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
 }
 
 .agenda__grid-lugar {
@@ -2442,6 +2448,12 @@ img {
   .speakers__grid .speaker-card {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+
+  .agenda__grid-index, .agenda__grid-que-es, .agenda__grid-merch, .agenda__grid-lugar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
